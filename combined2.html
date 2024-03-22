@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* General Styles */
+/* General Styles */
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color-1: #1f242d; /* Dark background color */
+  --bg-color-2: #323946; /* Lighter background color */
+  --txt-color: #fff;
+  --main-color: #0ef;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--txt-color);
+}
+
+section {
+  padding: 10rem 9% 2rem;
+}
+
+/* Section 1 Styles */
+#home {
+  background-color: var(--bg-color-1);
+}
+
+.logo {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo h1 {
+  font-size: 4rem; /* Adjust font size */
+  font-weight: bold;
+  color: white;
+}
+
+.logo h2 {
+  font-size: 2rem; /* Adjust font size */
+  color: white;
+  margin-left: 10px;
+}
+
+.slogan-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.slogan {
+  width: 50%; /* Adjust width */
+  text-align: center;
+  font-size: 4rem; /* Adjust font size */
+  margin: 0;
+  height: auto; /* Adjust height */
+}
+
+.menu {
+  width: 50%; /* Adjust width */
+  margin: 0 30px;
+  background-color: #000080;
+  border-radius: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 20px 0;
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold;
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu ul li:last-child {
+  border-bottom: none;
+}
+
+.menu ul li:hover {
+  background-color: #0000a0;
+  cursor: pointer;
+}
+
+/* Section 2 Styles */
+#home2 {
+  background-color: var(--bg-color-2);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Adjust width */
+}
+
+.title {
+  font-size: 3rem; /* Adjust font size */
+  margin-bottom: 20px;
+}
+
+.schedule {
+  font-size: 2rem; /* Adjust font size */
+  margin-bottom: 20px;
+}
+
+.blocks-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: #20cd8d;
+  border-radius: 20px;
+  margin: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.block .icon {
+  font-size: 4rem; /* Adjust font size */
+  margin-bottom: 10px;
+}
+
+.block .plus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem; /* Adjust font size */
+  color: white;
+}
+
+/* Increase the height of only the Scheduled Classes block */
+.schedule .block {
+  height: 392px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .slogan,
+  .menu {
+    width: 80%;
+  }
+
+  #home2 {
+    display: block; /* Ensure Section 2 is visible on mobile */
+  }
+
+  #home .slogan-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home .slogan {
+    width: 80%;
+    font-size: 3rem; /* Adjust font size */
+    height: auto;
+  }
+
+  #home .menu {
+    width: 80%;
+  }
+
+  #home .blocks-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home .block {
+    width: 80%;
+  }
+
+  #home .container {
+    flex-direction: column;
+  }
+
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="home" id="home"> 
+  <div class="logo">
+    <h1>Global Academics</h1>
+    <h2>EST. 2015</h2>
+  </div>
+  
+  <div class="slogan-menu">
+    <div class="slogan">
+      <div>let's make</div>
+      <div>learning fun!</div>
+    </div>
+  
+    <div class="menu">
+      <ul>
+        <li>Introduction</li>
+        <li>Classes Offered</li>
+        <li>Classroom Features</li>
+        <li>Faculty and Staff</li>
+        <li>Application Process</li>
+        <li>Contact Information</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="home2" id="home2">  
+  <div class="container">
+    <div class="inner-container">
+      <div class="title">How we operate</div>
+      <div class="schedule">
+        <div class="block">
+          <span class="plus">+</span>
+          <i class="icon far fa-calendar-alt"></i>
+          <span>Scheduled Classes</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="inner-container">
+      <div class="blocks-container">
+        <div class="block">
+          <span class="plus">+</span>
+          <i class="icon far fa-file-alt"></i>
+          <span>Course Coverage</span>
+        </div>
+  
+        <div class="block">
+          <span class="plus">+</span>
+          <i class="icon fas fa-chart-bar"></i>
+          <span>Progress tracking</span>
+        </div>
+  
+        <div class="block">
+          <span class="plus">+</span>
+          <i class="icon fas fa-user"></i>
+          <span>Personal Guidance</span>
+        </div>
+      </div>
+  
+      <div class="blocks-container">
+        <div class="block">
+          <span class="plus">+</span>
+          <i class="icon fas fa-th-large"></i>
+          <span>Online Access</span>
+        </div>
+  
+        <div class="block">
+          <span class="plus">+</span>
+          <i class="icon far fa-lightbulb"></i>
+          <span>IITian’s Approach</span>
+        </div>
+  
+        <div class="block">
+          <span class="plus">+</span>
+          <i class="icon far fa-heart"></i>
+          <span>Weekly Feedback</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
