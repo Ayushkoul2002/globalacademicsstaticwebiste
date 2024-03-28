@@ -237,6 +237,49 @@ section {
   color: white; /* Adjust icon color */
 }
 
+/* css for section 4 */
+
+#home4 {
+  background-color:  #5943F4;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+#home4 .title {
+  background-color: #5943F4; 
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#home4 table {
+  margin: 0 auto;
+  background-color: white;
+  border-spacing: 0px;
+}
+
+#home4 th, #home4 td {
+  padding: 35px;
+  border: 3px solid #6a00ff;
+  text-align: center;
+  color: black; 
+  height: 60px;
+}
+
+#home4 th {
+  background-color: black;
+  color: white; 
+}
+
+#home4 th:last-child, #home4 td:last-child {
+  width: 250px; /* Adjust width for the last column (Time) */
+}
+
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   #home .slogan,
@@ -388,6 +431,54 @@ section {
       </div>
     </div>
   </section>
+
+
+  <section class="home4" id="home4"> 
+    <div class="title">Class Calendar</div>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Class 6</th>
+          <th>Class 7</th>
+          <th>Class 8</th>
+          <th>Class 9</th>
+          <th>Class 10</th>
+          <th style="background-color: #1DFF48; color: black;">Time</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Friday</td>
+          <td>Maths Science</td>
+          <td>Science Maths</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td style="background-color: #1DFF48; color: black;">9:00 AM - 10:30 AM</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td></td>
+          <td></td>
+          <td>Maths Science</td>
+          <td>Science Maths</td>
+          <td></td>
+          <td style="background-color: #1DFF48; color: black;">10:45 AM - 12:15 PM</td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Maths Science Foundation</td>
+          <td style="background-color: #1DFF48; color: black;">1:00 PM - 2:30 PM</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
   
   
 </body>
