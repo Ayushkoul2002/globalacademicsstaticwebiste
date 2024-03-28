@@ -1,80 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HR Email Extractor</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Schedule</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    .schedule-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .schedule-header {
+      grid-column: 1 / 7;
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column: 1 / 6;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .row {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 10px;
+      background-color: #444;
+    }
+
+    .col {
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    .cell {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #555;
+    }
+
+    .schedule-timeslots {
+      grid-column: 6 / 7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #00cc00;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .timeslot {
+      padding: 5px;
+    }
+
+    .placeholder-image {
+      grid-column: 1 / 7;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .schedule-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+      }
+
+      .schedule-header {
+        grid-column: 1 / -1;
+      }
+
+      .schedule-grid {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .schedule-timeslots {
+        grid-column: 1 / -1;
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
+        flex-wrap: wrap;
+      }
+
+      .timeslot {
+        margin: 5px;
+      }
+
+      .placeholder-image {
+        grid-column: 1 / -1;
+      }
     }
-    .container {
-        text-align: center;
-    }
-    textarea {
-        width: 80%;
-        height: 200px;
-        margin-bottom: 20px;
-    }
-    input[type="number"] {
-        width: 100px;
-        padding: 5px;
-        font-size: 16px;
-    }
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-    .result {
-        margin-top: 20px;
-    }
-</style>
+  </style>
 </head>
 <body>
-<div class="container">
-    <textarea id="textInput" placeholder="Enter text containing email addresses..."></textarea>
-    <label for="year">Enter year:</label>
-    <input type="number" id="year" min="1900" max="2099" step="1" value="2024">
-    <button onclick="extractHREmails()">Extract HR Emails</button>
-    <div class="result" id="result"></div>
-</div>
-<script>
-function extractHREmails() {
-    var text = document.getElementById('textInput').value;
-    var year = document.getElementById('year').value;
-    var emails = text.match(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g);
-    var result = document.getElementById('result');
-    var extractedEmails = [];
-    if (emails) {
-        emails.forEach(function(email) {
-            if (email.includes("hr") || email.includes("HR")) {
-                var matches = email.match(/\b\d{4}\b/g);
-                if (matches && matches.includes(year)) {
-                    extractedEmails.push(email);
-                }
-            }
-        });
-        if (extractedEmails.length > 0) {
-            result.innerHTML = "<p>HR Emails for the year " + year + ":</p><ul>";
-            extractedEmails.forEach(function(email) {
-                result.innerHTML += "<li>" + email + "</li>";
-            });
-            result.innerHTML += "</ul>";
-        } else {
-            result.innerHTML = "<p>No HR emails found for the year " + year + ".</p>";
-        }
-    } else {
-        result.innerHTML = "<p>No emails found.</p>";
-    }
-}
-</script>
+  <div class="schedule-container">
+    <div class="schedule-header">Class Calendar</div>
+    <div class="schedule-grid">
+      <!-- Rows for days -->
+      <div class="row day">Friday</div>
+      <div class="row day">Saturday</div>
+      <div class="row day">Sunday</div>
+
+      <!-- Columns for class levels -->
+      <div class="col">Class 6</div>
+      <div class="col">Class 7</div>
+      <div class="col">Class 8</div>
+      <div class="col">Class 9</div>
+      <div class="col">Class 10</div>
+
+      <!-- Cells for subjects -->
+      <div class="cell">Maths</div>
+      <div class="cell">Science</div>
+      <div class="cell">Maths</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell">Maths</div>
+      <div class="cell">Science</div>
+      <div class="cell">Maths</div>
+      <div class="cell">Science</div>
+      <div class="cell">Maths</div>
+      <div class="cell">Science</div>
+      <div class="cell">Foundation</div>
+    </div>
+    <div class="schedule-timeslots">
+      <!-- Time slots -->
+      <div class="timeslot">3:00 PM to 4:00 PM</div>
+      <div class="timeslot">4:00 PM to 5:00 PM</div>
+      <div class="timeslot">5:00 PM to 6:00 PM</div>
+      <div class="timeslot">6:00 PM to 7:00 PM</div>
+      <div class="timeslot">7:00 PM to 8:00 PM</div>
+      <div class="timeslot">7:00 PM to 8:00 PM</div>
+      <div class="timeslot">8:00 PM to 9:00 PM</div>
+    </div>
+    <div class="placeholder-image">
+      <!-- Placeholder for the image -->
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="#ccc" />
+      </svg>
+    </div>
+  </div>
 </body>
 </html>
