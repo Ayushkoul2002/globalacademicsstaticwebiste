@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Resources</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #6a00ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 20px 40px; /* Adjusted padding */
+    border-radius: 10px;
+  }
+
+  .left-section
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    min-width: 50%; /* Set minimum width to 50% */
+  }
+
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adjusted margin */
+    text-align: left;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 15px; /* Adjusted margin */
+    text-align: left;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    padding: 20px 60px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+    border: none;
+    border-radius: 10px; /* Increase border radius */
+    font-weight: bold;
+    cursor: pointer;
+    width: 300px; /* Increased width */
+    text-align: center;
+    color: black; /* Changed text color to black */
+    font-size: 18px; /* Increased font size */
+    box-sizing: border-box; /* Include padding and border in width and height */
+  }
+
+  .class6 { background-color: green; }
+  .class7 { background-color: blue; }
+  .class8 { background-color: pink; }
+  .class9 { background-color: yellow; }
+  .class10 { background-color: orange; }
+
+  /* Button hover effect */
+  .button:hover {
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="left-section">
+    <div class="title">8. Class Resources</div>
+    <div class="subtitle">Students can access classroom study resources here.</div>
+  </div>
+  <div class="right-section">
+    <div class="buttons">
+      <button class="button class6">Class 6</button>
+      <button class="button class7">Class 7</button>
+      <button class="button class8">Class 8</button>
+      <button class="button class9">Class 9</button>
+      <button class="button class10">Class 10</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
