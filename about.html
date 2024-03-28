@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #6A53FF;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .content h2 {
+      font-size: 3rem; /* Increased header size */
+    }
+
+    .content p {
+      font-size: 1.2rem; /* Increased text size */
+      line-height: 1.6; /* Increased line-height for better readability */
+    }
+
+    .image-container {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-container::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      z-index: 0;
+      clip-path: polygon(
+        calc(0% + 20px) calc(30% + 20px),
+        calc(20% + 20px) calc(0% + 20px),
+        calc(80% - 20px) calc(0% + 20px),
+        calc(100% - 20px) calc(30% + 20px),
+        calc(100% - 20px) calc(70% - 20px),
+        calc(80% - 20px) calc(100% - 20px),
+        calc(20% + 20px) calc(100% - 20px),
+        calc(0% + 20px) calc(70% - 20px)
+      );
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .content,
+      .image-container {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h2>About Us</h2>
+      <p>Global Academics is a premier but affordable offline tuition center dedicated to fostering academic excellence in students from class 6th to 10th standards. Our unique approach, spearheaded by esteemed IIT alumni, is designed to unlock the full potential of every student. At Global Academics, we believe in nurturing minds with a blend of foundational knowledge and innovative thinking, preparing students not just for exams, but for a lifetime of learning.</p>
+    </div>
+    <div class="image-container">
+      <img src="about.jpg" alt="Illustration">
+    </div>
+  </div>
+</body>
+</html>

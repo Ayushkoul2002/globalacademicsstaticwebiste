@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Us?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #6A53FF;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      height: auto; /* Adjusted height */
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      max-width: 90%; /* Adjusted max-width */
+      padding: 20px;
+    }
+
+    .image-container {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      margin-right: 20px; /* Add spacing between image and content */
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px; /* Added border radius */
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: #D8F9D8;
+      border-radius: 10px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch;
+    }
+
+    .content h2 {
+      margin-top: 0;
+      text-align: center; /* Center align heading */
+      font-size: 32px; /* Increase font size */
+      font-weight: bold; /* Make heading bold */
+      margin-bottom: 20px; /* Add bottom margin */
+      text-transform: uppercase; /* Convert text to uppercase */
+    }
+
+    .content p {
+      margin-bottom: 10px;
+      text-align: left; /* Align paragraph text to the left */
+      font-size: 25px; /* Increase font size */
+      line-height: 1.6; /* Increase line height */
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: stretch; /* Stretch items to fill container width */
+      }
+
+      .image-container {
+        margin-right: 0; /* Remove right margin on small screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="why.jpg" alt="Illustration">
+    </div>
+    <div class="content">
+      <h2>Why Us?</h2>
+      <p><strong>Point 1</strong> Only IITians as Tutors with Prior Teaching Exp.</p>
+      <p><strong>Point 2</strong> Premium Classes at an Affordable Fee</p>
+      <p><strong>Point 3</strong> Offline classes in your vicinity.</p>
+    </div>
+  </div>
+</body>
+</html>
