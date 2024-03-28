@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Email Extractor</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    .container {
+        text-align: center;
+    }
+    textarea {
+        width: 80%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    input[type="number"] {
+        width: 100px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .result {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <textarea id="textInput" placeholder="Enter text containing email addresses..."></textarea>
+    <label for="year">Enter year:</label>
+    <input type="number" id="year" min="1900" max="2099" step="1" value="2024">
+    <button onclick="extractHREmails()">Extract HR Emails</button>
+    <div class="result" id="result"></div>
+</div>
+<script>
+function extractHREmails() {
+    var text = document.getElementById('textInput').value;
+    var year = document.getElementById('year').value;
+    var emails = text.match(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g);
+    var result = document.getElementById('result');
+    var extractedEmails = [];
+    if (emails) {
+        emails.forEach(function(email) {
+            if (email.includes("hr") || email.includes("HR")) {
+                var matches = email.match(/\b\d{4}\b/g);
+                if (matches && matches.includes(year)) {
+                    extractedEmails.push(email);
+                }
+            }
+        });
+        if (extractedEmails.length > 0) {
+            result.innerHTML = "<p>HR Emails for the year " + year + ":</p><ul>";
+            extractedEmails.forEach(function(email) {
+                result.innerHTML += "<li>" + email + "</li>";
+            });
+            result.innerHTML += "</ul>";
+        } else {
+            result.innerHTML = "<p>No HR emails found for the year " + year + ".</p>";
+        }
+    } else {
+        result.innerHTML = "<p>No emails found.</p>";
+    }
+}
+</script>
+</body>
+</html>
