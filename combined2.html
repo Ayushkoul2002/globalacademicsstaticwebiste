@@ -277,9 +277,15 @@ body {
 
 
 
+
+
 /* Section 2 Styles */
 #home2 {
-  background-color:#5943F4;
+  background-color: #6A53FF;
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #home2 .container {
@@ -292,12 +298,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  margin-right: 40px;
 }
 
 #home2 .title {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 35px;
+
 }
 
 #home2 .schedule {
@@ -311,12 +320,13 @@ body {
   flex-wrap: nowrap; /* Changed to wrap */
   justify-content: center;
   width: 100%;
+  margin-right: 200px;
 }
 
 #home2 .block {
-  width: 100%; /* Adjusted width */
+  width: calc(100% - 40px); /* Adjusted width to account for margin */
   height: 200px;
-  background-color: #20cd8d;
+  background: linear-gradient(135deg, #20cd8d, #20a3d8); /* Gradient background */
   border-radius: 20px;
   margin: 20px;
   position: relative;
@@ -324,25 +334,51 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: rotate-in 1s ease-out forwards; /* Custom animation */
+}
+
+@keyframes rotate-in {
+  from {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
 }
 
 #home2 .block .icon {
   font-size: 4rem;
   margin-bottom: 10px;
+  color: #fff; /* Icon color */
+  box-shadow: 0 0 0 2px black, 0 0 0 6px #fff; /* Add black border with some space */
+  outline: 2px solid transparent; /* Hide default outline */
 }
 
 #home2 .block .plus {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 2rem;
-  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Circular border */
+  background-color: #000; /* Black color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* White color */
+  font-size: 2rem; /* Plus sign size */
 }
+
 
 /* Increase the height of only the Scheduled Classes block */
 #home2 .schedule .block {
-  height: 392px;
+  height: 391px;
+  width: 100%;
 }
+
+
 
 /* Section 3 Styles */
 
