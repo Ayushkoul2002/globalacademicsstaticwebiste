@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Process</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #8b72ff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .step {
+            max-width: 300px;
+            padding: 20px;
+            margin: 0 20px;
+            background-color: #ffffff;
+            color: #333333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-icon {
+            font-size: 48px;
+            color: #8b72ff;
+            margin-bottom: 10px;
+        }
+
+        .mascot img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step {
+                max-width: 100%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application Process</h1>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>Online or Offline Registration</h3>
+                <p>Parents can register their child by filling out a quick online form on our website.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Verification Call</h3>
+                <p>Our team will follow up with a brief verification call to ensure all details are accurate.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h3>Welcome Confirmation</h3>
+                <p>Upon verification, parents receive a welcome confirmation, completing the enrollment process.</p>
+            </div>
+        </div>
+        <div class="mascot">
+            <img src="mascot.png" alt="Mascot">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
