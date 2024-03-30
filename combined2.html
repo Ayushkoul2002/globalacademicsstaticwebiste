@@ -173,7 +173,50 @@ body {
   }
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+  #home .logo h1 {
+    font-size: 10vw; /* Adjusted font size */
+  }
 
+  #home .logo h2 {
+    font-size: 6vw; /* Adjusted font size */
+  }
+
+  #home .slogan {
+    font-size: 8vw; /* Adjusted font size */
+  }
+
+  #home .menu {
+    padding: 20px; /* Adjusted padding */
+  }
+
+  #home .menu ul li {
+    font-size: 5vw; /* Adjusted font size */
+  }
+
+  #home .image {
+    width: 80%; /* Adjusted width */
+  }
+}
+
+@media (max-width: 480px) {
+  #home .logo h1 {
+    font-size: 12vw; /* Further adjusted font size */
+  }
+
+  #home .logo h2 {
+    font-size: 7vw; /* Further adjusted font size */
+  }
+
+  #home .slogan {
+    font-size: 10vw; /* Further adjusted font size */
+  }
+
+  #home .menu ul li {
+    font-size: 6vw; /* Further adjusted font size */
+  }
+}
 
 
 
@@ -273,6 +316,54 @@ body {
   opacity: 1; /* Show when in view */
   transform: scale(1); /* Scale to normal size */
 }
+
+@media only screen and (max-width: 1200px) {
+  /* Adjustments for smaller screens */
+  #home4 .content h2 {
+    font-size: 2.5rem; /* Decrease text size */
+  }
+
+  #home4 .content p {
+    font-size: 1.8rem; /* Decrease text size */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjustments for tablets and smaller devices */
+  #home4 .container {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center align text */
+  }
+
+  #home4 .content,
+  #home4 .image-container {
+    width: 100%; /* Full width */
+  }
+
+  #home4 .image-container {
+    margin-top: 20px; /* Add space between content and image */
+  }
+
+  #home4 img {
+    max-width: 80%; /* Decrease image size */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Adjustments for mobile devices */
+  #home4 .content h2 {
+    font-size: 2rem; /* Further decrease text size */
+  }
+
+  #home4 .content p {
+    font-size: 1.6rem; /* Further decrease text size */
+  }
+
+  #home4 img {
+    max-width: 60%; /* Further decrease image size */
+  }
+}
+
 
 
 
@@ -378,75 +469,144 @@ body {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  #home2 .container {
+    padding: 0 20px; /* Add padding to container */
+  }
 
+  #home2 .inner-container {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Reduce margin */
+  }
 
-/* Section 3 Styles */
+  #home2 .blocks-container {
+    flex-direction: row; /* Display blocks in a row */
+    flex-wrap: wrap; /* Allow blocks to wrap to next line */
+    justify-content: center; /* Center blocks horizontally */
+  }
 
-#home3 .title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  #home2 .block {
+    width: calc(50% - 20px); /* Two blocks per row with margin */
+    margin: 10px; /* Adjust margin */
+  }
+
+  #home2 .schedule {
+    margin-bottom: 10px; /* Reduce margin */
+  }
 }
-#home3 {
+
+
+
+
+
+
+
+
+/* Section 6 Styles */
+#home6 {
   background-color: #5943F4;
   padding: 50px 20px; /* Adjusted padding */
 }
 
-#home3 .container {
-  padding: 20px;
+#home6 .container {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap */
+  justify-content: center;
+  align-items: center;
+}
+
+#home6 .image-container {
+  flex: 1; /* Take up 50% width */
+  max-width: 50%; /* Limit max width */
+  margin-bottom: 20px; /* Added margin */
+  position: relative; /* Required for absolute positioning of image */
+}
+
+#home6 .image-container img {
   width: 100%;
+  border-radius: 15px; /* Added border radius */
+  animation: slide-in 1s ease forwards; /* Animate image */
+  animation-delay: 0.5s; /* Delay animation */
+  animation-fill-mode: both; /* Maintain final state of animation */
+  animation-timing-function: ease-in-out; /* Smooth animation */
+  animation-iteration-count: infinite; /* Make the animation repeat infinitely */
+  animation-direction: alternate; /* Make the animation alternate direction */
 }
 
-#home3 .content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap; /* Added wrap */
+@keyframes slide-in {
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(5%);
+  }
 }
 
-#home3 .image-container {
-  flex: 1;
-  max-width: 50%;
-  max-height: 70%;
-  border-radius: 15px;
-  overflow: hidden;
-  margin-right: 20px; /* Added margin-right */
+#home6 .content {
+  flex: 1; /* Take up 50% width */
+  max-width: 50%; /* Limit max width */
+  text-align: center; /* Center text */
+  margin-bottom: 20px; /* Added margin */
 }
 
-#home3 .image-container img {
-  display: block;
+#home6 .content h2 {
+  font-size: 3rem; /* Adjusted font size */
+  margin-bottom: 20px; /* Added margin */
 }
 
-#home3 .classes-buttons {
-  flex: 1;
-  max-width: 50%;
-  display: flex;
-  flex-wrap: wrap; /* Added wrap */
-  justify-content: space-around; /* Adjusted alignment */
+#home6 .content p {
+  font-size: 1.8rem; /* Adjusted font size */
+  margin-bottom: 10px; /* Added margin */
 }
 
-#home3 .classes-buttons button {
-  background-color: #05006b;
-  color: white;
-  padding: 30px 60px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 24px;
-  margin-bottom: 20px; /* Added margin-bottom */
-  width: 45%; /* Adjusted width */
-  box-sizing: border-box; /* Added box-sizing */
+#home6 .content p:first-child {
+  position: relative; /* Required for positioning the animation */
 }
 
-#home3 .social-icons {
-  display: flex;
-  align-items: center;
+#home6 .content p:first-child::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff; /* Highlight color */
+  bottom: -5px; /* Adjusted position */
+  left: 0;
+  transform-origin: left;
+  animation: highlight 2s ease infinite alternate; /* Animate highlight */
 }
 
-#home3 .social-icons i {
-  font-size: 24px; /* Adjust icon size */
-  margin: 0 10px; /* Adjust icon spacing */
-  color: white; /* Adjust icon color */
+@keyframes highlight {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
+
+@media (max-width: 768px) {
+  #home6 .content h2 {
+    font-size: 2.5rem; /* Adjusted font size */
+  }
+  
+  #home6 .content p {
+    font-size: 1.6rem; /* Adjusted font size */
+  }
+}
+
+@media (max-width: 480px) {
+  #home6 .container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+  
+  #home6 .image-container,
+  #home6 .content {
+    max-width: 100%; /* Full width for both elements on smaller screens */
+  }
+}
+
+
+
 
 /* css for section 4 */
 
@@ -995,45 +1155,7 @@ body {
             }
         }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-  #home .slogan,
-  #home .menu {
-    width: 80%;
-  }
 
-  #home2 {
-    display: block; /* Ensure Section 2 is visible on mobile */
-  }
-
-  #home #home .slogan-menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #home .slogan {
-    width: 80%;
-    font-size: 3rem; /* Adjust font size */
-    height: auto;
-  }
-
-  #home .menu {
-    width: 80%;
-  }
-
-  #home2 .blocks-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #home2 .block {
-    width: 80%;
-  }
-
-  #home2 .container {
-    flex-direction: column;
-  }
-}
 
 
 </style>
@@ -1140,10 +1262,11 @@ body {
     </div>
   </section>
 
+
   <section id="home6">
     <div class="container">
       <div class="image-container">
-        <img src="why.jpg" alt="Illustration">
+        <img src="why.png" alt="Illustration">
       </div>
       <div class="content">
         <h2>Why Us?</h2>
