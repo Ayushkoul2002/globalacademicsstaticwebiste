@@ -102,6 +102,85 @@ section {
   cursor: pointer;
 }
 
+
+#home4 {
+  background-color: #6A53FF;
+  color: #fff;
+  padding: 20px;
+}
+
+#home4 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#home4 .content {
+  flex: 1;
+  padding: 20px;
+}
+
+#home4 .content h2 {
+  font-size: 3rem;
+}
+
+#home4 .content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#home4 .image-container {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+#home4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  position: relative;
+  z-index: 1;
+}
+
+#home4 .image-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  z-index: 0;
+  clip-path: polygon(
+    calc(0% + 20px) calc(30% + 20px),
+    calc(20% + 20px) calc(0% + 20px),
+    calc(80% - 20px) calc(0% + 20px),
+    calc(100% - 20px) calc(30% + 20px),
+    calc(100% - 20px) calc(70% - 20px),
+    calc(80% - 20px) calc(100% - 20px),
+    calc(20% + 20px) calc(100% - 20px),
+    calc(0% + 20px) calc(70% - 20px)
+  );
+}
+
+@media (max-width: 768px) {
+  #home4 .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #home4 .content,
+  #home4 .image-container {
+    flex: 1 1 100%;
+  }
+}
+
+
+
 /* Section 2 Styles */
 #home2 {
   background-color:#5943F4;
@@ -239,7 +318,7 @@ section {
 
 /* css for section 4 */
 
-#home4 {
+#home5 {
   background-color:  #5943F4;
   padding: 20px;
   margin-bottom: 20px;
@@ -247,7 +326,7 @@ section {
 
 
 
-#home4 .title {
+#home5 .title {
   background-color: #5943F4; 
   padding: 20px;
   font-size: 24px;
@@ -256,13 +335,13 @@ section {
   text-align: center;
 }
 
-#home4 table {
+#home5 table {
   margin: 0 auto;
   background-color: white;
   border-spacing: 0px;
 }
 
-#home4 th, #home4 td {
+#home5 th, #home5 td {
   padding: 35px;
   border: 3px solid #6a00ff;
   font-weight: bold; 
@@ -271,16 +350,518 @@ section {
   height: 60px;
 }
 
-#home4 th {
+#home5 th {
   background-color: black;
   color: white; 
 }
 
-#home4 th:last-child, #home4 td:last-child {
+#home5 th:last-child, #home5 td:last-child {
   width: 250px; /* Adjust width for the last column (Time) */
 }
 
 
+#home6 .container {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  max-width: 90%;
+  padding: 20px;
+}
+
+#home6 .image-container {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  margin-right: 20px;
+}
+
+#home6 img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+#home6 .content {
+  flex: 1;
+  padding: 20px;
+  background-color: #D8F9D8;
+  border-radius: 10px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+#home6 .content h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#home6 .content p {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  #home6 .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #home6 .image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+#home10
+{
+  margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #6a00ff; /* Solid purple background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+#home10 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 20px 40px; /* Adjusted padding */
+    border-radius: 10px;
+  }
+
+  #home10 .left-section
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    min-width: 50%; /* Set minimum width to 50% */
+  }
+
+  #home10 .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #home10 .title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adjusted margin */
+    text-align: left;
+  }
+
+  #home10 .subtitle {
+    font-size: 20px;
+    margin-bottom: 15px; /* Adjusted margin */
+    text-align: left;
+  }
+
+  #home10 .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home10 .button {
+    padding: 20px 60px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+    border: none;
+    border-radius: 10px; /* Increase border radius */
+    font-weight: bold;
+    cursor: pointer;
+    width: 300px; /* Increased width */
+    text-align: center;
+    color: black; /* Changed text color to black */
+    font-size: 18px; /* Increased font size */
+    box-sizing: border-box; /* Include padding and border in width and height */
+  }
+
+  #home10 .class6 { background-color: green; }
+  #home10 .class7 { background-color: blue; }
+  #home10 .class8 { background-color: pink; }
+  #home10 .class9 { background-color: yellow; }
+  #home10 .class10 { background-color: orange; }
+
+  /* Button hover effect */
+  #home10 .button:hover {
+    opacity: 0.8;
+  }
+
+
+
+  #home14
+  {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #6a00ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #home14 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 20px 40px; /* Adjusted padding */
+    border-radius: 10px;
+  }
+
+  #home14 .left-section
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    min-width: 50%; /* Set minimum width to 50% */
+  }
+
+  #home14 .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #home14 .title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adjusted margin */
+    text-align: left;
+  }
+
+  #home14 .subtitle {
+    font-size: 20px;
+    margin-bottom: 15px; /* Adjusted margin */
+    text-align: left;
+  }
+
+  #home14 .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home14 .button {
+    padding: 20px 60px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+    border: none;
+    border-radius: 10px; /* Increase border radius */
+    font-weight: bold;
+    cursor: pointer;
+    width: 300px; /* Increased width */
+    text-align: center;
+    color: black; /* Changed text color to black */
+    font-size: 18px; /* Increased font size */
+    box-sizing: border-box; /* Include padding and border in width and height */
+  }
+
+  #home14 .class6 { background-color: green; }
+  #home14 .class7 { background-color: blue; }
+  #home14 .class8 { background-color: pink; }
+  #home14 .class9 { background-color: yellow; }
+  #home14 .class10 { background-color: orange; }
+
+  /* Button hover effect */
+  #home14 .button:hover {
+    opacity: 0.8;
+  }
+
+  #home17
+  {
+    font-family: 'Poppins', sans-serif;
+            background-color: #8b72ff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+  }
+
+
+  #home17 .container {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #home17 .process-steps {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        #home17 .step {
+            max-width: 300px;
+            padding: 20px;
+            margin: 0 20px;
+            background-color: #ffffff;
+            color: #333333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #home17 .step-icon {
+            font-size: 48px;
+            color: #8b72ff;
+            margin-bottom: 10px;
+        }
+
+        #home17 .mascot img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            #home17 .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #home17 .step {
+                max-width: 100%;
+                margin: 20px 0;
+            }
+        }
+
+
+        #home18 {
+            font-family: 'Poppins', sans-serif;
+            background-color: #8b72ff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #home18 .container {
+            max-width: 1000px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #home18 .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #home18 .pricing-card {
+            background-color: #C2FFE5;
+            color: #333333;
+            border-radius: 20px; /* Increased border radius */
+            border: 2px solid #000000; /* Added black border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px; /* Increased padding */
+            flex: 1;
+            max-width: calc(33.33% - 40px); /* Adjust based on the number of cards per row */
+            margin-bottom: 20px;
+            position: relative; /* Added position relative */
+            display: flex;
+            flex-direction: column; /* Added flex-direction column */
+        }
+
+        #home18 .card-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        #home18 .card-price {
+            font-size: 24px;
+            font-weight: 600;
+            color: #A2A40D;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        #home18 .card-price::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Adjust the distance of the line from the text */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+        }
+
+        #home18 .card-details {
+            text-align: left;
+            margin-bottom: auto; /* Pushes content to the top */
+        }
+
+        #home18 .card-details ul {
+            padding-left: 20px;
+        }
+
+        #home18 .book-demo {
+            background-color: #000000; /* Changed button color to black */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Added margin-top to separate from content */
+            align-self: center; /* Center the button horizontally */
+        }
+
+        #home18 .book-demo:hover {
+            background-color: #333333; /* Darken button color on hover */
+        }
+
+        @media (max-width: 768px) {
+            #home18 .pricing-cards {
+                flex-direction: column; /* Display cards below each other */
+            }
+            
+            #home18 .pricing-card {
+                max-width: 100%; /* Take up full width */
+            }
+        }
+
+        @media (max-width: 480px) {
+            #home18 .pricing-card {
+                max-width: 100%; /* Take up full width */
+            }
+        }
+
+
+        #home19 {
+            font-family: 'Poppins', sans-serif;
+            background-color: #8b72ff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #home19 .container {
+            max-width: 800px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row-reverse; /* Align content to the right */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #home19 .contact-content {
+            width: 60%; /* Adjust the width of the text content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        #home19 .contact-info {
+            margin-bottom: 20px;
+        }
+
+        #home19 .contact-info p {
+            margin: 10px 0;
+        }
+
+        #home19 .contact-info i {
+            margin-right: 10px;
+        }
+
+        #home19 .register-btn {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            align-self: center; /* Center button horizontally */
+        }
+
+        #home19 .register-btn:hover {
+            background-color: #555555;
+        }
+
+        #home19 .social-icons {
+            margin-top: 20px;
+            align-self: center; /* Center social icons horizontally */
+        }
+
+        #home19 .social-icons.icons {
+            display: flex;
+            justify-content: center; /* Center icons horizontally */
+        }
+
+        #home19 .social-icons .icons a {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        #home19 .social-icons #home19 .icons a:hover {
+            color: #ffcc00;
+        }
+
+        #home19 .support-agent {
+            align-self: center; /* Center image vertically */
+        }
+
+        #home19 .support-agent img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            #home19 .container {
+                flex-direction: column; /* Stack content vertically */
+                align-items: center; /* Center content horizontally */
+                text-align: center; /* Center text content */
+            }
+
+            #home19 .contact-content {
+                width: 100%; /* Full width for text content */
+            }
+
+            #home19 .support-agent {
+                order: -1; /* Move image above text content */
+            }
+        }
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
@@ -351,6 +932,20 @@ section {
       </div>
     </div>
   </section>
+
+
+  <section class="home4" id="home4"> 
+    <div class="container">
+      <div class="content">
+        <h2>About Us</h2>
+        <p>Global Academics is a premier but affordable offline tuition center dedicated to fostering academic excellence in students from class 6th to 10th standards. Our unique approach, spearheaded by esteemed IIT alumni, is designed to unlock the full potential of every student. At Global Academics, we believe in nurturing minds with a blend of foundational knowledge and innovative thinking, preparing students not just for exams, but for a lifetime of learning.</p>
+      </div>
+      <div class="image-container">
+        <img src="about.jpg" alt="Illustration">
+      </div>
+    </div>
+  </section>
+  
   
   <section class="home2" id="home2">  
     <div class="container">
@@ -408,6 +1003,20 @@ section {
       </div>
     </div>
   </section>
+
+  <section id="home6">
+    <div class="container">
+      <div class="image-container">
+        <img src="why.jpg" alt="Illustration">
+      </div>
+      <div class="content">
+        <h2>Why Us?</h2>
+        <p><strong>Point 1</strong> Only IITians as Tutors with Prior Teaching Exp.</p>
+        <p><strong>Point 2</strong> Premium Classes at an Affordable Fee</p>
+        <p><strong>Point 3</strong> Offline classes in your vicinity.</p>
+      </div>
+    </div>
+  </section>
   
   
   <section class="home3" id="home3"> <!-- Added section for classes offered -->
@@ -435,7 +1044,26 @@ section {
   </section>
 
 
-  <section class="home4" id="home4"> 
+    <section class="home10" id="home10">
+    <div class="container">
+      <div class="left-section">
+        <div class="title">4. Classroom Policies</div>
+        <div class="subtitle">Please ensure your child adheres to our classroom rules:</div>
+      </div>
+      <div class="right-section">
+        <div class="buttons">
+          <button class="button class6">Regular Attendance</button>
+          <button class="button class7">Participate Regularly</button>
+          <button class="button class8">Homework Supervision</button>
+          <button class="button class9">Safe Technology Usage</button>
+          <button class="button class10">Feedback Sharing</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="home5" id="home5"> 
     <div class="title">Class Calendar</div>
     <table>
       <thead>
@@ -512,6 +1140,139 @@ section {
       </tbody>
     </table>
   </section>
+
+
+  <section class="home14" id="home14">
+    <div class="container">
+      <div class="left-section">
+        <div class="title">8. Class Resources</div>
+        <div class="subtitle">Students can access classroom study resources here.</div>
+      </div>
+      <div class="right-section">
+        <div class="buttons">
+          <button class="button class6">Class 6</button>
+          <button class="button class7">Class 7</button>
+          <button class="button class8">Class 8</button>
+          <button class="button class9">Class 9</button>
+          <button class="button class10">Class 10</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="home17" id="home17">
+    <div class="container">
+      <h1>Application Process</h1>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3>Online or Offline Registration</h3>
+          <p>Parents can register their child by filling out a quick online form on our website.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Verification Call</h3>
+          <p>Our team will follow up with a brief verification call to ensure all details are accurate.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3>Welcome Confirmation</h3>
+          <p>Upon verification, parents receive a welcome confirmation, completing the enrollment process.</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </section>
+
+
+
+  <section class="home18" id="home18">
+    <div class="container">
+      <h1>Fee Structure [ GST Included ]</h1>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="card-header">CBSC Class 6th, 7th, & 8th</div>
+          <div class="card-price">INR 3499/mo</div>
+          <div class="card-details">
+            <p>Expert CBSE Tutors for Class 6th, 7th and 8th:</p>
+            <ul>
+              <li>MATHS</li>
+              <li>SCIENCE</li>
+            </ul>
+          </div>
+          <button class="book-demo">BOOK FREE DEMO CLASS</button>
+        </div>
+        <div class="pricing-card">
+          <div class="card-header">CBSC 9th & 10th</div>
+          <div class="card-price">INR 3999/mo</div>
+          <div class="card-details">
+            <p>IITian tutors for Class 9th and 10th:</p>
+            <ul>
+              <li>MATHS</li>
+              <li>SCIENCE</li>
+            </ul>
+          </div>
+          <button class="book-demo">BOOK FREE DEMO CLASS</button>
+        </div>
+        <div class="pricing-card">
+          <div class="card-header">IIT JEE & NEET FOUNDATION</div>
+          <div class="card-price">INR 4999/mo</div>
+          <div class="card-details">
+            <p>IITian tutors for Class 9th and 10th:</p>
+            <ul>
+              <li>MATHS</li>
+              <li>SCIENCE</li>
+              <li>EXAM SPECIFIC EXTRA CLASSES</li>
+            </ul>
+          </div>
+          <button class="book-demo">BOOK FREE DEMO CLASS</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </section>
+
+
+  <section class="home19" id="home19">
+    <div class="container">
+      <div class="contact-content">
+        <h1>Contact us</h1>
+        <div class="contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> FF156, Gaur City Center, Greater Noida West, Noida, Delhi NCR- 201009</p>
+          <p><i class="fas fa-globe"></i> www.globalacademics.in</p>
+          <p><i class="fas fa-envelope"></i> helpme@globalacademics.in</p>
+          <p><i class="fas fa-phone"></i> +91-7987483389</p>
+        </div>
+        <button class="register-btn">REGISTER TODAY</button>
+        <div class="social-icons">
+          <p>GET SOCIAL</p>
+          <div class="icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="support-agent">
+        <img src="support-agent.jpg" alt="Support Agent">
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+
+
+
   
   
   

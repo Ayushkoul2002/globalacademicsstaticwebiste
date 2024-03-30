@@ -1,166 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Schedule</title>
-  <style>
-    /* Reset some default styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Teaching Techniques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6a42f4;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    .schedule-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto 1fr auto;
-      gap: 10px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        .step {
+            width: 250px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+        }
 
-    .schedule-header {
-      grid-column: 1 / 7;
-      text-align: center;
-      font-weight: bold;
-      font-size: 24px;
-      background-color: #f2f2f2;
-      padding: 10px;
-    }
+        .step img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    .schedule-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-column: 1 / 6;
-      background-color: #333;
-      color: #fff;
-    }
+        .step h3 {
+            color: #6a42f4;
+            margin-top: 10px;
+        }
 
-    .row {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 10px;
-      background-color: #444;
-    }
-
-    .col {
-      text-align: center;
-      font-weight: bold;
-      padding: 10px;
-    }
-
-    .cell {
-      text-align: center;
-      padding: 10px;
-      border: 1px solid #555;
-    }
-
-    .schedule-timeslots {
-      grid-column: 6 / 7;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #00cc00;
-      color: #fff;
-      padding: 10px;
-    }
-
-    .timeslot {
-      padding: 5px;
-    }
-
-    .placeholder-image {
-      grid-column: 1 / 7;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .schedule-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr auto;
-      }
-
-      .schedule-header {
-        grid-column: 1 / -1;
-      }
-
-      .schedule-grid {
-        grid-column: 1 / -1;
-        grid-template-columns: repeat(5, 1fr);
-      }
-
-      .schedule-timeslots {
-        grid-column: 1 / -1;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .timeslot {
-        margin: 5px;
-      }
-
-      .placeholder-image {
-        grid-column: 1 / -1;
-      }
-    }
-  </style>
+        .step p {
+            color: #333333;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-  <div class="schedule-container">
-    <div class="schedule-header">Class Calendar</div>
-    <div class="schedule-grid">
-      <!-- Rows for days -->
-      <div class="row day">Friday</div>
-      <div class="row day">Saturday</div>
-      <div class="row day">Sunday</div>
-
-      <!-- Columns for class levels -->
-      <div class="col">Class 6</div>
-      <div class="col">Class 7</div>
-      <div class="col">Class 8</div>
-      <div class="col">Class 9</div>
-      <div class="col">Class 10</div>
-
-      <!-- Cells for subjects -->
-      <div class="cell">Maths</div>
-      <div class="cell">Science</div>
-      <div class="cell">Maths</div>
-      <div class="cell"></div>
-      <div class="cell"></div>
-      <div class="cell">Maths</div>
-      <div class="cell">Science</div>
-      <div class="cell">Maths</div>
-      <div class="cell">Science</div>
-      <div class="cell">Maths</div>
-      <div class="cell">Science</div>
-      <div class="cell">Foundation</div>
+    <div class="container">
+        <div class="step">
+            <img src="step1.png" alt="Step 1">
+            <h3>Step 1</h3>
+            <p>Interactive Teaching: We will engage students by delivering comprehensive subject instruction during interactive classes.</p>
+        </div>
+        <div class="step">
+            <img src="step2.png" alt="Step 2">
+            <h3>Step 2</h3>
+            <p>Problem-Solving Practice: We will reinforce learning through hands-on problem-solving sessions, guiding students to apply knowledge.</p>
+        </div>
+        <div class="step">
+            <img src="step3.png" alt="Step 3">
+            <h3>Step 3</h3>
+            <p>Exam-Ready Assessments: We will evaluate progress through regular exams, refining strategies to enhance overall exam preparedness.</p>
+        </div>
     </div>
-    <div class="schedule-timeslots">
-      <!-- Time slots -->
-      <div class="timeslot">3:00 PM to 4:00 PM</div>
-      <div class="timeslot">4:00 PM to 5:00 PM</div>
-      <div class="timeslot">5:00 PM to 6:00 PM</div>
-      <div class="timeslot">6:00 PM to 7:00 PM</div>
-      <div class="timeslot">7:00 PM to 8:00 PM</div>
-      <div class="timeslot">7:00 PM to 8:00 PM</div>
-      <div class="timeslot">8:00 PM to 9:00 PM</div>
-    </div>
-    <div class="placeholder-image">
-      <!-- Placeholder for the image -->
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40" fill="#ccc" />
-      </svg>
-    </div>
-  </div>
 </body>
 </html>
