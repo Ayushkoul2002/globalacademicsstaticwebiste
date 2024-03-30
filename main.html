@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Academics</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  /* Global styles */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  .section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #8a4a4a;
+    border-bottom: 1px solid #ddd;
+  }
+  .section:nth-child(even) {
+    background-color: #3c3232;
+  }
+  h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  /* Animation styles */
+  .animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  .section {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  /* Resetting default margin and padding */
+  body,
+  html {
+      margin: 0;
+      padding: 0;
+  }
+
+  /* Applying a global font family */
+  body {
+      font-family: Arial, sans-serif;
+  }
+
+  /* Styling the container */
+  .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  /* Styling section titles */
+  .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+
+  /* Styling section subtitles */
+  .subtitle {
+      font-size: 18px;
+      margin-bottom: 20px;
+  }
+
+  /* Styling buttons */
+  .button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 16px;
+  }
+
+  /* Styling buttons on hover */
+  .button:hover {
+      background-color: #0056b3;
+  }
+
+  /* Styling pricing cards */
+  .pricing-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+  }
+
+  /* Styling pricing card headers */
+  .card-header {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  /* Styling pricing card prices */
+  .card-body {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  /* Styling pricing card term */
+  .term {
+      font-size: 14px;
+      color: #666;
+  }
+
+  /* Styling pricing card buttons */
+  .card-footer {
+      margin-top: 20px;
+  }
+
+  /* Styling map iframe */
+  iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+  }
+
+  /* Styling section animations */
+  .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+  }
+
+  /* Styling visible sections */
+  .animate-visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  /* Additional styling for elements inside sections */
+
+  /* Section 1 */
+  .logo h1 {
+      color: #fff;
+      font-size: 36px;
+      margin-bottom: 10px;
+  }
+
+  .logo h2 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+
+  .slogan-menu {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .slogan div {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 10px;
+  }
+
+  .menu ul {
+      list-style-type: none;
+  }
+
+  .menu ul li {
+      display: inline-block;
+      margin-right: 20px;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+  }
+
+  .menu ul li:last-child {
+      margin-right: 0;
+  }
+
+  .menu ul li:hover {
+      color: #ffd700;
+  }
+
+  /* Section 2 */
+  .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .content h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .content p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+  }
+
+  .image-container img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  /* Section 3 */
+  .inner-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+
+  .schedule,
+  .blocks-container {
+      flex: 1;
+  }
+
+  .block {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+
+  .plus {
+      margin-right: 10px;
+      font-size: 24px;
+      color: #007bff;
+      cursor: pointer;
+  }
+
+  .plus:hover {
+      color: #0056b3;
+  }
+
+  .icon {
+      font-size: 24px;
+      color: #333;
+      margin-right: 10px;
+  }
+
+  /* Section 4 */
+  .image-container {
+      margin-bottom: 20px;
+  }
+
+  .content h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .content p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+  }
+
+  .content strong {
+      color: #333;
+  }
+
+  /* Section 5 */
+  .title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+  }
+
+  th {
+      background-color: #f2f2f2;
+      color: #333;
+  }
+
+  td {
+      color: #666;
+  }
+
+  /* Section 6 */
+  .left-section {
+      flex: 1;
+  }
+
+  .right-section {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+
+  .title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .subtitle {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .buttons {
+      display: flex;
+  }
+
+  .button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 16px;
+  }
+
+  .button:hover {
+      background-color: #0056b3;
+  }
+
+  /* Section 7 */
+  .container {
+      max-width: 100%;
+  }
+
+  .process-steps {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .step {
+      flex: 1;
+      text-align: center;
+      margin: 0 10px;
+  }
+
+  .step-icon {
+      font-size: 48px;
+      color: #007bff;
+      margin-bottom: 20px;
+  }
+
+  .process-steps h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+  }
+
+  .process-steps p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+  }
+
+  /* Section 8 */
+  .pricing-cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .pricing-card {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+  }
+
+  .card-body {
+      font-size: 36px;
+      color: #007bff;
+      margin-bottom: 10px;
+  }
+
+  .term {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+  }
+
+  .card-footer {
+      margin-top: 20px;
+  }
+
+  .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  .btn:hover {
+      background-color: #0056b3;
+  }
+
+  /* Section 9 */
+  .address p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <section class="section">
+    <div class="logo">
+      <h1>Global Academics</h1>
+      <h2>Empowering Future Generations</h2>
+    </div>
+    <div class="slogan-menu">
+      <div class="slogan">
+        <div>Welcome to Global Academics</div>
+        <div>Your Pathway to Success</div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Programs</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="content">
+      <div>
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida neque eu lobortis efficitur. Mauris blandit felis id lorem tincidunt, nec dignissim eros ultrices.</p>
+        <p>Morbi nec nibh et nisi semper finibus. Nullam vitae leo nec libero pulvinar venenatis. Nunc tincidunt elit sit amet turpis fermentum mollis.</p>
+      </div>
+      <div class="image-container">
+        <img src="about.jpg" alt="About Us">
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="inner-container">
+      <div class="schedule">
+        <div class="title">Class Schedule</div>
+        <div class="block">
+          <div class="plus"><i class="fas fa-plus-circle"></i></div>
+          <div class="icon"><i class="far fa-calendar-alt"></i></div>
+          <div>Monday - Mathematics</div>
+        </div>
+        <div class="block">
+          <div class="plus"><i class="fas fa-plus-circle"></i></div>
+          <div class="icon"><i class="far fa-calendar-alt"></i></div>
+          <div>Tuesday - Science</div>
+        </div>
+        <div class="block">
+          <div class="plus"><i class="fas fa-plus-circle"></i></div>
+          <div class="icon"><i class="far fa-calendar-alt"></i></div>
+          <div>Wednesday - English</div>
+        </div>
+      </div>
+      <div class="blocks-container">
+        <div class="title">Upcoming Events</div>
+        <div class="block">
+          <div class="plus"><i class="fas fa-plus-circle"></i></div>
+          <div class="icon"><i class="far fa-calendar-check"></i></div>
+          <div>Lorem ipsum dolor sit amet</div>
+        </div>
+        <div class="block">
+          <div class="plus"><i class="fas fa-plus-circle"></i></div>
+          <div class="icon"><i class="far fa-calendar-check"></i></div>
+          <div>Consectetur adipiscing elit</div>
+        </div>
+        <div class="block">
+          <div class="plus"><i class="fas fa-plus-circle"></i></div>
+          <div class="icon"><i class="far fa-calendar-check"></i></div>
+          <div>Sed do eiusmod tempor incididunt</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="content">
+      <div class="left-section">
+        <h2>Our Vision</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida neque eu lobortis efficitur. Mauris blandit felis id lorem tincidunt, nec dignissim eros ultrices.</p>
+      </div>
+      <div class="right-section">
+        <div class="image-container">
+          <img src="vision.jpg" alt="Vision">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="title">Featured Programs</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Program</th>
+          <th>Duration</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Web Development</td>
+          <td>6 Months</td>
+          <td>$1000</td>
+        </tr>
+        <tr>
+          <td>Data Science</td>
+          <td>12 Months</td>
+          <td>$2000</td>
+        </tr>
+        <tr>
+          <td>Machine Learning</td>
+          <td>9 Months</td>
+          <td>$1500</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="section">
+    <div class="content">
+      <div class="left-section">
+        <h2>Admission Procedure</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida neque eu lobortis efficitur. Mauris blandit felis id lorem tincidunt, nec dignissim eros ultrices.</p>
+        <strong>Apply Now!</strong>
+      </div>
+      <div class="right-section">
+        <div class="buttons">
+          <button class="button">Apply Online</button>
+          <button class="button">Download Form</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-icon"><i class="fas fa-user"></i></div>
+          <h3>Step 1</h3>
+          <p>Create an Account</p>
+        </div>
+        <div class="step">
+          <div class="step-icon"><i class="fas fa-edit"></i></div>
+          <h3>Step 2</h3>
+          <p>Fill Application Form</p>
+        </div>
+        <div class="step">
+          <div class="step-icon"><i class="far fa-credit-card"></i></div>
+          <h3>Step 3</h3>
+          <p>Pay Application Fee</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="card-header">Basic</div>
+        <div class="card-body">$100</div>
+        <div class="term">Per Month</div>
+        <div class="card-footer">
+          <button class="btn">Sign Up</button>
+        </div>
+      </div>
+      <div class="pricing-card">
+        <div class="card-header">Standard</div>
+        <div class="card-body">$200</div>
+        <div class="term">Per Month</div>
+        <div class="card-footer">
+          <button class="btn">Sign Up</button>
+        </div>
+      </div>
+      <div class="pricing-card">
+        <div class="card-header">Premium</div>
+        <div class="card-body">$300</div>
+        <div class="term">Per Month</div>
+        <div class="card-footer">
+          <button class="btn">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="address">
+      <p>Global Academics</p>
+      <p>123 Main Street, City, Country</p>
+      <p>Email: info@globalacademics.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+  </section>
+</div>
+</body>
+</html>
