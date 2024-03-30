@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Design</title>
+    <style>
+        body {
+            background-color: #6a5acd;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%; /* Changed to 100% */
+        }
+
+        .agenda {
+            text-align: left;
+            font-size: 140%; /* Increased font size by 40% */
+        }
+
+        .reminders {
+            background-color: #ff9999;
+            border-radius: 50%;
+            color: black;
+            width: 280px; /* Increased width by 40% */
+            height: 280px; /* Increased height by 40% */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 28px; /* Increased padding by 40% */
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .icon {
+            background-color: #ffcc66;
+            border-radius: 50%;
+            width: 112px; /* Increased width by 40% */
+            height: 112px; /* Increased height by 40% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: -56px; /* Increased bottom position by 40% */
+            right: -56px; /* Increased right position by 40% */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Changed flex-direction to column for mobile */
+                align-items: center; /* Center-align items for mobile */
+            }
+
+            .agenda {
+                margin-bottom: 20px; /* Added margin-bottom for spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="agenda">
+            <h1>1. Today's Agenda</h1>
+            <p>We will showcase the lessons or activities that the class has for the day.</p>
+            <p>This can be broken down by:</p>
+            <ul>
+                <li>Blocks of time</li>
+                <li>Activity</li>
+                <li>Subject</li>
+            </ul>
+        </div>
+        <div class="reminders">
+            <h2>Reminders</h2>
+            <p>Aim is to Help the students remember things that they need to accomplish within the day.</p>
+            <div class="icon">😄</div>
+        </div>
+    </div>
+</body>
+</html>
