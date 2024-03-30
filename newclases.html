@@ -3,79 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class News</title>
+    <title>Classroom Features</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #6a42f4;
             color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #6a42f4;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .item {
-            width: 250px;
-            padding: 20px;
-            background-color: #ffffff;
+            position: relative;
+            max-width: 90%; /* Adjust as needed */
+            max-height: 90%; /* Adjust as needed */
+            overflow: hidden;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            text-align: center;
-            color: #333333;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
-        .item img {
-            max-width: 100%;
+        .image-bg {
+            display: block;
+            width: 100%;
             height: auto;
+            opacity: 0.8;
         }
 
-        .item h3 {
-            color: #6a42f4;
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .text h1 {
+            margin: 0;
+            margin-top: 100px;
+        }
+
+        .text p {
             margin-top: 10px;
-        }
-
-        .item p {
-            margin-top: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .item {
-                width: 100%;
-                max-width: 400px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item">
-            <img src="placeholder.png" alt="Upcoming Events">
-            <h3>Upcoming Events</h3>
-            <p>Parents will be informed about any upcoming events, such as parent-teacher meetings, competitions, cultural activities. This helps in advance planning, and parents can plan accordingly.</p>
-        </div>
-        <div class="item">
-            <img src="placeholder.png" alt="Student Achievements">
-            <h3>Student Achievements</h3>
-            <p>Highlight noteworthy achievements of students, whether it's academic accomplishments or positive contributions to the classroom community. Celebrating these accomplishments reinforces a motivating environment.</p>
-        </div>
-        <div class="item">
-            <img src="placeholder.png" alt="Curriculum Updates">
-            <h3>Curriculum Updates</h3>
-            <p>We will share any updates or changes to the curriculum, providing insights and what students will be learning in the coming weeks. This helps parents support the child's education at home and stay engaged in their academic journey.</p>
+        <img src="5.png" class="image-bg" alt="Background Image">
+        <div class="text">
+            <h1>Classroom Features</h1>
+            <p>Welcome to our class online noticeboard.</p>
         </div>
     </div>
 </body>

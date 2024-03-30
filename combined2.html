@@ -714,90 +714,344 @@ body {
   }
 }
 
-#home10
-{
-  margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #6a00ff; /* Solid purple background */
-    color: white;
-    display: flex;
-    justify-content: center;
+
+
+/* Section 3 Styles */
+
+/* Section 3 Styles */
+#home3 .title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff; /* Adjusted text color */
+}
+
+#home3 {
+  background-color: blue;
+  padding: 50px 20px; /* Adjusted padding */
+}
+
+#home3 .container {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home3 .content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home3 .image-container {
+  flex: 1;
+  max-width: 45%; /* Adjusted max-width */
+  max-height: 70%;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-right: 20px;
+  animation: floatAnimation 5s infinite alternate; /* Added animation */
+}
+
+#home3 .image-container img {
+  display: block;
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+}
+
+#home3 .classes-buttons {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+#home3 .classes-buttons button {
+  background-color: #05006b;
+  color: white;
+  padding: 25px 50px; /* Adjusted padding */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px; /* Adjusted font size */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Adjusted transition */
+}
+
+#home3 .classes-buttons button:hover {
+  background-color: #001f5b;
+  transform: scale(1.05); /* Slightly increased scale on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Added box-shadow on hover */
+}
+
+#home3 .classes-buttons button:active {
+  background-color: #002080;
+}
+
+#home3 .social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#home3 .social-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#home3 .social-icons i:hover {
+  color: #ff4081;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 1024px) {
+  #home3 .image-container {
+    max-width: 50%; /* Adjusted width */
+  }
+}
+
+@media (max-width: 768px) {
+  #home3 .content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
     align-items: center;
-    height: 100vh;
+  }
+
+  #home3 .image-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #home3 .classes-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #home3 .image-container {
+    max-width: 100%;
+  }
+
+  #home3 .classes-buttons button {
+    padding: 20px 40px;
+  }
+}
+
+
+.home7 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #6a42f4;
+}
+
+#home7 .container {
+  position: relative;
+  max-width: 90%; /* Adjust as needed */
+  max-height: 90%; /* Adjust as needed */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#home7 .image-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  animation: floatAnimation 5s infinite alternate; /* Added animation */
+}
+
+#home7 .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#home7 .text h1 {
+  margin: 0;
+  margin-top: 250px;
+  font-size: 40px;
+}
+
+#home7 .text p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  #home7 .text h1 {
+    margin-top: 50px; /* Adjusted margin */
+  }
 }
 
 
 
+
+
+
+/* Section 10 Styles */
+#home10 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #6a00ff; /* Solid purple background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 #home10 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%; /* Full width */
-    height: 100%; /* Full height */
-    padding: 20px 40px; /* Adjusted padding */
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjusted width */
+  padding: 20px; /* Adjusted padding */
+  border-radius: 10px;
+}
+
+#home10 .left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the left */
+  min-width: 50%; /* Set minimum width to 50% */
+}
+
+#home10 .right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home10 .title {
+  font-size: 50px; /* Adjusted font size */
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+#home10 .subtitle {
+  text-align: left;
+  font-size: 20px; /* Adjusted font size */
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+#home10 .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home10 .button {
+  padding: 20px 60px; /* Adjusted padding */
+  margin-bottom: 20px; /* Adjusted margin */
+  border: none;
+  border-radius: 10px; /* Increase border radius */
+  font-weight: bold;
+  cursor: pointer;
+  width: 300px; /* Adjusted width */
+  text-align: center;
+  color: black; /* Changed text color to black */
+  font-size: 18px; /* Adjusted font size */
+  box-sizing: border-box; /* Include padding and border in width and height */
+  transition: opacity 0.3s ease; /* Added transition for hover effect */
+}
+
+#home10 .class6 { background-color: green; }
+#home10 .class7 { background-color: #C2FFE5 }
+#home10 .class8 { background-color: pink; }
+#home10 .class9 { background-color: yellow; }
+#home10 .class10 { background-color: orange; }
+
+/* Button hover effect */
+#home10 .button:hover {
+  opacity: 0.8;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  #home10 .container {
+    width: 90%; /* Adjusted width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  #home10 .container {
+    flex-direction: column; /* Adjusted direction for small screens */
+    align-items: center; /* Center items */
+    padding: 20px; /* Adjusted padding */
   }
 
-  #home10 .left-section
-  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the left */
-    min-width: 50%; /* Set minimum width to 50% */
-  }
-
+  #home10 .left-section,
   #home10 .right-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-width: unset; /* Reset minimum width */
+    text-align: center; /* Center text */
+    align-items: center; /* Center items */
   }
 
   #home10 .title {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 5px; /* Adjusted margin */
-    text-align: left;
-  }
-
-  #home10 .subtitle {
-    font-size: 20px;
-    margin-bottom: 15px; /* Adjusted margin */
-    text-align: left;
-  }
-
-  #home10 .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: 2.5rem; /* Adjusted font size */
   }
 
   #home10 .button {
-    padding: 20px 60px; /* Increased padding */
-    margin-bottom: 20px; /* Increased margin */
-    border: none;
-    border-radius: 10px; /* Increase border radius */
-    font-weight: bold;
-    cursor: pointer;
-    width: 300px; /* Increased width */
-    text-align: center;
-    color: black; /* Changed text color to black */
-    font-size: 18px; /* Increased font size */
-    box-sizing: border-box; /* Include padding and border in width and height */
+    width: 100%; /* Adjusted width */
+  }
+}
+
+@media (max-width: 480px) {
+  #home10 .title {
+    font-size: 2rem; /* Adjusted font size */
   }
 
-  #home10 .class6 { background-color: green; }
-  #home10 .class7 { background-color: blue; }
-  #home10 .class8 { background-color: pink; }
-  #home10 .class9 { background-color: yellow; }
-  #home10 .class10 { background-color: orange; }
-
-  /* Button hover effect */
-  #home10 .button:hover {
-    opacity: 0.8;
+  #home10 .subtitle {
+    font-size: 1.25rem; /* Adjusted font size */
   }
+
+  #home10 .button {
+    padding: 15px 30px; /* Adjusted padding */
+  }
+}
+
 
 
 
@@ -883,6 +1137,10 @@ body {
   #home14 .button:hover {
     opacity: 0.8;
   }
+
+
+
+
 
   #home17
   {
@@ -1283,7 +1541,7 @@ body {
       <div class="title">Classes Offered</div>
       <div class="content">
         <div class="image-container">
-          <img src="https://via.placeholder.com/400" alt="Person holding books">
+          <img src="classes.png" alt="Person holding books">
         </div>
         <div class="classes-buttons">
           <button>Class 6</button>
@@ -1301,6 +1559,18 @@ body {
       </div>
     </div>
   </section>
+
+
+  <section class="home7" id="home7">
+    <div class="container">
+      <img src="5.png" class="image-bg" alt="Background Image">
+      <div class="text">
+        <h1>Classroom Features</h1>
+        <p>Welcome to our class online noticeboard.</p>
+      </div>
+    </div>
+  </section>
+  
 
 
     <section class="home10" id="home10">
