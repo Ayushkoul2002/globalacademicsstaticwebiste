@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Website</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <style>
 /* General Styles */
 @import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
@@ -20,6 +22,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -33,25 +37,32 @@ section {
   padding: 20px;
 }
 
+
 /* Section 1 Styles */
+
 #home {
   background-color: #5943F4;
+  padding: 20px;
 }
 
 #home .logo {
-  text-align: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 40px;
 }
 
 #home .logo h1 {
-  font-size: 4rem;
+  font-size: 35px; /* Using viewport width units for responsiveness */
   font-weight: bold;
   color: white;
+  margin-top: 10px;
 }
 
 #home .logo h2 {
-  font-size: 2rem;
+  font-size: 2vw; /* Using viewport width units for responsiveness */
   color: white;
-  margin-left: 43px;
   margin-top: 20px;
 }
 
@@ -63,15 +74,15 @@ section {
 }
 
 #home .slogan {
-  width: 50%;
+  flex:1;
   text-align: center;
-  font-size: 4rem;
-  margin: 0;
-  height: auto;
+  margin-bottom: 30px;
+  font-size: 35px; /* Using viewport width units for responsiveness */
+  position: relative; /* Required for positioning the image */
 }
 
 #home .menu {
-  width: 50%;
+  flex: 1; /* Take up remaining space */
   margin: 0 30px;
   background-color: #000080;
   border-radius: 40px;
@@ -87,7 +98,7 @@ section {
 
 #home .menu ul li {
   padding: 20px 0;
-  font-size: 2rem;
+  font-size: 2vw; /* Using viewport width units for responsiveness */
   font-weight: bold;
   color: white;
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
@@ -102,11 +113,76 @@ section {
   cursor: pointer;
 }
 
+#home .image {
+  bottom: 10px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 200px;
+  height: auto;
+  animation: slide-in 1s ease forwards;
+  background-color: transparent; /* Set background to transparent */
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#typing-text {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: wave 2s linear infinite, color-change 8s infinite; /* Combining wave and color-change animations */
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #ff0000; /* Red */
+  }
+  25% {
+    color: #ffa500; /* Orange */
+  }
+  50% {
+    color: #ffff00; /* Yellow */
+  }
+  75% {
+    color: #19ff19; /* Green */
+  }
+  100% {
+    color: #fe46e2; /* Violet */
+  }
+}
+
+
+
+
+
+
+
 
 #home4 {
   background-color: #6A53FF;
   color: #fff;
   padding: 20px;
+  position: relative;
+
 }
 
 #home4 .container {
@@ -114,20 +190,15 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 100%; /* Ensure container fills the height of the section */
 }
 
 #home4 .content {
   flex: 1;
   padding: 20px;
-}
-
-#home4 .content h2 {
-  font-size: 3rem;
-}
-
-#home4 .content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.9); /* Initially scaled down */
+  transition: opacity 0.5s, transform 0.5s; /* Smooth transition */
 }
 
 #home4 .image-container {
@@ -143,42 +214,22 @@ section {
   border: 2px solid transparent;
   position: relative;
   z-index: 1;
+  animation: floatAnimation 5s infinite alternate; /* Floating animation */
 }
 
-#home4 .image-container::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  z-index: 0;
-  clip-path: polygon(
-    calc(0% + 20px) calc(30% + 20px),
-    calc(20% + 20px) calc(0% + 20px),
-    calc(80% - 20px) calc(0% + 20px),
-    calc(100% - 20px) calc(30% + 20px),
-    calc(100% - 20px) calc(70% - 20px),
-    calc(80% - 20px) calc(100% - 20px),
-    calc(20% + 20px) calc(100% - 20px),
-    calc(0% + 20px) calc(70% - 20px)
-  );
-}
-
-@media (max-width: 768px) {
-  #home4 .container {
-    flex-direction: column;
-    height: auto;
+@keyframes floatAnimation {
+  from {
+    transform: translateY(0);
   }
-
-  #home4 .content,
-  #home4 .image-container {
-    flex: 1 1 100%;
+  to {
+    transform: translateY(-20px);
   }
 }
 
+#home4.in-view .content {
+  opacity: 1; /* Show when in view */
+  transform: scale(1); /* Scale to normal size */
+}
 
 
 /* Section 2 Styles */
@@ -916,10 +967,10 @@ section {
     
     <div class="slogan-menu">
       <div class="slogan">
-        <div>let's make</div>
-        <div>learning fun!</div>
+        <p>Let's make <span id="typing-text">Learning fun!</span></p>
+        <img src="homeimg.png" alt="Image" class="image">
       </div>
-    
+
       <div class="menu">
         <ul>
           <li>Introduction</li>
@@ -931,7 +982,10 @@ section {
         </ul>
       </div>
     </div>
-  </section>
+</section>
+
+
+
 
 
   <section class="home4" id="home4"> 
@@ -1188,7 +1242,6 @@ section {
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </section>
 
 
@@ -1236,7 +1289,6 @@ section {
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </section>
 
 
@@ -1266,16 +1318,82 @@ section {
     </div>
   </section>
   
-  
-  
-  
-  
 
-
-
-  
-  
   
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    // Function to handle section visibility and animate child elements
+    function handleSectionVisibility() {
+      var sections = $(".section");
+      sections.each(function(index, section) {
+        var top = $(section).offset().top;
+        var bottom = top + $(section).outerHeight();
+        var windowTop = $(window).scrollTop();
+        var windowBottom = windowTop + $(window).height();
+
+        if (windowTop >= top && windowBottom <= bottom) {
+          $(section).addClass("animate-visible");
+          $(section).find("*").addClass("animate-visible");
+        } else {
+          $(section).removeClass("animate-visible");
+          $(section).find("*").removeClass("animate-visible");
+        }
+      });
+    }
+
+    // Initial call to handle section visibility
+    handleSectionVisibility();
+
+    // Call handleSectionVisibility on scroll
+    $(window).on("scroll", function() {
+      handleSectionVisibility();
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+  const home4 = document.querySelector("#home4");
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function checkVisibility() {
+    if (isElementInViewport(home4)) {
+      home4.classList.add("in-view");
+
+      // Remove the event listener once the element is in view
+      window.removeEventListener("scroll", checkVisibility);
+      window.removeEventListener("resize", checkVisibility);
+    }
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  window.addEventListener("resize", checkVisibility);
+
+  // Check visibility on page load
+  checkVisibility();
+});
+
+
+</script>
+
+
+
+
+
+
+
 </html>
   
