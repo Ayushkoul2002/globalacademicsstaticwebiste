@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #8b72ff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row-reverse; /* Align content to the right */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-content {
+            width: 60%; /* Adjust the width of the text content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        .register-btn {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            align-self: center; /* Center button horizontally */
+        }
+
+        .register-btn:hover {
+            background-color: #555555;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            align-self: center; /* Center social icons horizontally */
+        }
+
+        .social-icons .icons {
+            display: flex;
+            justify-content: center; /* Center icons horizontally */
+        }
+
+        .social-icons .icons a {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons .icons a:hover {
+            color: #ffcc00;
+        }
+
+        .support-agent {
+            align-self: center; /* Center image vertically */
+        }
+
+        .support-agent img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack content vertically */
+                align-items: center; /* Center content horizontally */
+                text-align: center; /* Center text content */
+            }
+
+            .contact-content {
+                width: 100%; /* Full width for text content */
+            }
+
+            .support-agent {
+                order: -1; /* Move image above text content */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-content">
+            <h1>Contact us</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> FF156, Gaur City Center, Greater Noida West, Noida, Delhi NCR- 201009</p>
+                <p><i class="fas fa-globe"></i> www.globalacademics.in</p>
+                <p><i class="fas fa-envelope"></i> helpme@globalacademics.in</p>
+                <p><i class="fas fa-phone"></i> +91-7987483389</p>
+            </div>
+            <button class="register-btn">REGISTER TODAY</button>
+            <div class="social-icons">
+                <p>GET SOCIAL</p>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="support-agent">
+            <img src="support-agent.jpg" alt="Support Agent">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

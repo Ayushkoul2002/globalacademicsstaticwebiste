@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Structure</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #8b72ff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-card {
+            background-color: #C2FFE5;
+            color: #333333;
+            border-radius: 20px; /* Increased border radius */
+            border: 2px solid #000000; /* Added black border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px; /* Increased padding */
+            flex: 1;
+            max-width: calc(33.33% - 40px); /* Adjust based on the number of cards per row */
+            margin-bottom: 20px;
+            position: relative; /* Added position relative */
+            display: flex;
+            flex-direction: column; /* Added flex-direction column */
+        }
+
+        .card-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-price {
+            font-size: 24px;
+            font-weight: 600;
+            color: #A2A40D;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .card-price::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Adjust the distance of the line from the text */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+        }
+
+        .card-details {
+            text-align: left;
+            margin-bottom: auto; /* Pushes content to the top */
+        }
+
+        .card-details ul {
+            padding-left: 20px;
+        }
+
+        .book-demo {
+            background-color: #000000; /* Changed button color to black */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Added margin-top to separate from content */
+            align-self: center; /* Center the button horizontally */
+        }
+
+        .book-demo:hover {
+            background-color: #333333; /* Darken button color on hover */
+        }
+
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column; /* Display cards below each other */
+            }
+            
+            .pricing-card {
+                max-width: 100%; /* Take up full width */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pricing-card {
+                max-width: 100%; /* Take up full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fee Structure [ GST Included ]</h1>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <div class="card-header">CBSC Class 6th, 7th, & 8th</div>
+                <div class="card-price">INR 3499/mo</div>
+                <div class="card-details">
+                    <p>Expert CBSE Tutors for Class 6th, 7th and 8th:</p>
+                    <ul>
+                        <li>MATHS</li>
+                        <li>SCIENCE</li>
+                    </ul>
+                </div>
+                <button class="book-demo">BOOK FREE DEMO CLASS</button>
+            </div>
+            <div class="pricing-card">
+                <div class="card-header">CBSC 9th & 10th</div>
+                <div class="card-price">INR 3999/mo</div>
+                <div class="card-details">
+                    <p>IITian tutors for Class 9th and 10th:</p>
+                    <ul>
+                        <li>MATHS</li>
+                        <li>SCIENCE</li>
+                    </ul>
+                </div>
+                <button class="book-demo">BOOK FREE DEMO CLASS</button>
+            </div>
+            <div class="pricing-card">
+                <div class="card-header">IIT JEE & NEET FOUNDATION</div>
+                <div class="card-price">INR 4999/mo</div>
+                <div class="card-details">
+                    <p>IITian tutors for Class 9th and 10th:</p>
+                    <ul>
+                        <li>MATHS</li>
+                        <li>SCIENCE</li>
+                        <li>EXAM SPECIFIC EXTRA CLASSES</li>
+                    </ul>
+                </div>
+                <button class="book-demo">BOOK FREE DEMO CLASS</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

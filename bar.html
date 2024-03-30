@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        canvas {
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>5. Recognition</h2>
+        <p>Recognizing and celebrating the top 3 ranking students each week is not just about showcasing achievements; it's about creating a culture of motivation and healthy competition within our tuition center.</p>
+        <canvas id="podiumChart"></canvas>
+    </div>
+    <script>
+        const data = {
+            labels: ['1st', '2nd', '3rd'],
+            datasets: [{
+                label: 'Ranking',
+                data: [100, 80, 60], // heights of bars representing ranking (adjust as needed)
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)', // 1st place (red)
+                    'rgba(54, 162, 235, 0.6)', // 2nd place (blue)
+                    'rgba(255, 206, 86, 0.6)'  // 3rd place (yellow)
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                family: 'Comic Sans MS',
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            color: '#666'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                family: 'Comic Sans MS',
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            color: '#666'
+                        }
+                    }
+                }
+            }
+        };
+
+        const podiumChart = new Chart(
+            document.getElementById('podiumChart'),
+            config
+        );
+    </script>
+</body>
+</html>
