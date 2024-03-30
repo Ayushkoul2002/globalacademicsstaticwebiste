@@ -609,47 +609,162 @@ body {
 
 
 /* css for section 4 */
-
-#home5 {
-  background-color:  #5943F4;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-
-
-#home5 .title {
-  background-color: #5943F4; 
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#home5 table {
-  margin: 0 auto;
-  background-color: white;
-  border-spacing: 0px;
-}
-
-#home5 th, #home5 td {
-  padding: 35px;
-  border: 3px solid #6a00ff;
-  font-weight: bold; 
-  font-size: 12px;
-  color: black; 
-  height: 60px;
-}
-
-#home5 th {
-  background-color: black;
-  color: white; 
-}
-
-#home5 th:last-child, #home5 td:last-child {
-  width: 250px; /* Adjust width for the last column (Time) */
-}
+.home5 {
+    background-color: #5943F4;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+  
+  .home5 .title {
+    background-color: #5943F4;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .home5 table {
+    background-color: white;
+    border-spacing: 0;
+    max-width: 100%; /* Ensure table does not exceed container width */
+    table-layout: fixed; /* Fix table layout */
+    width: 100%; /* Expand table to fit container */
+  }
+  
+  .home5 th,
+  .home5 td {
+    padding: 5px;
+    border: 1px solid #6a00ff;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    height: 40px;
+    max-width: 100px; /* Limit cell width */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for long text */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .home5 th {
+    background-color: black;
+    color: white;
+  }
+  
+  .home5 th:last-child,
+  .home5 td:last-child {
+    min-width: 100px; /* Adjust minimum width for the last column (Time) */
+  }
+  
+  /* Additional Styles */
+  .home5 .class-info,
+  .home5 .time-info {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .home5 .time-cell {
+    background-color: #1DFF48;
+    color: black;
+  }
+  
+  .home5 .time-header {
+    background-color: #1DFF48;
+    color: black;
+  }
+  
+/* Responsive CSS for home5 */
+@media (max-width: 1300px) {
+    .home5 th,
+    .home5 td {
+      padding: 4px;
+      font-size: 9px;
+    }
+    .home5 .title,
+    .home5 .class-info{
+      font-size: 10.8px;
+    }
+    .home5 .time-info {
+      font-size: 9px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .home5 th,
+    .home5 td {
+      padding: 3px;
+      font-size: 8px;
+    }
+    .home5 .title,
+    .home5 .class-info{
+      font-size: 8px;
+    }
+    .home5 .time-info {
+      font-size: 5.5px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .home5 th,
+    .home5 td {
+      padding: 2px;
+      font-size: 7px;
+    }
+    .home5 .title,
+    .home5 .class-info{
+      font-size: 7.5px;
+    }
+    .home5 .time-info {
+      font-size: 5px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .home5 th,
+    .home5 td {
+      padding: 1px;
+      font-size: 6px;
+    }
+    .home5 .title,
+    .home5 .class-info{
+      font-size: 7px;
+    }
+    .home5 .time-info {
+      font-size: 4.6px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .home5 th,
+    .home5 td {
+      padding: 1px;
+      font-size: 5px;
+    }
+    .home5 .title,
+    .home5 .class-info{
+      font-size: 6px;
+    }
+    .home5 .time-info {
+      font-size: 4px;
+    }
+  }
+  
+  @media (max-width: 300px) {
+    .home5 th,
+    .home5 td {
+      padding: 1px;
+      font-size: 4px;
+    }
+    .home5 .title,
+    .home5 .class-info{
+      font-size: 5px;
+    }
+    .home5 .time-info {
+      font-size: 2.8px;
+    }
+  }
 
 
 #home6 .container {
@@ -1055,88 +1170,130 @@ body {
 
 
 
-  #home14
-  {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #6a00ff;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+#home14 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #6a00ff; /* Solid purple background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+#home14 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjusted width */
+  padding: 20px; /* Adjusted padding */
+  border-radius: 10px;
+}
+
+#home14 .left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the left */
+  min-width: 50%; /* Set minimum width to 50% */
+}
+
+#home14 .right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home14 .title {
+  font-size: 50px; /* Adjusted font size */
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+#home14 .subtitle {
+  text-align: left;
+  font-size: 20px; /* Adjusted font size */
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+#home14 .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home14 .button {
+  padding: 20px 60px; /* Adjusted padding */
+  margin-bottom: 20px; /* Adjusted margin */
+  border: none;
+  border-radius: 10px; /* Increase border radius */
+  font-weight: bold;
+  cursor: pointer;
+  width: 300px; /* Adjusted width */
+  text-align: center;
+  color: black; /* Changed text color to black */
+  font-size: 18px; /* Adjusted font size */
+  box-sizing: border-box; /* Include padding and border in width and height */
+  transition: opacity 0.3s ease; /* Added transition for hover effect */
+}
+
+#home14 .class6 { background-color: green; }
+#home14 .class7 { background-color: #C2FFE5 }
+#home14 .class8 { background-color: pink; }
+#home14 .class9 { background-color: yellow; }
+#home14 .class10 { background-color: orange; }
+
+/* Button hover effect */
+#home14 .button:hover {
+  opacity: 0.8;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
   #home14 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%; /* Full width */
-    height: 100%; /* Full height */
-    padding: 20px 40px; /* Adjusted padding */
-    border-radius: 10px;
+    width: 90%; /* Adjusted width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  #home14 .container {
+    flex-direction: column; /* Adjusted direction for small screens */
+    align-items: center; /* Center items */
+    padding: 20px; /* Adjusted padding */
   }
 
-  #home14 .left-section
-  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the left */
-    min-width: 50%; /* Set minimum width to 50% */
-  }
-
+  #home14 .left-section,
   #home14 .right-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-width: unset; /* Reset minimum width */
+    text-align: center; /* Center text */
+    align-items: center; /* Center items */
   }
 
   #home14 .title {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 5px; /* Adjusted margin */
-    text-align: left;
-  }
-
-  #home14 .subtitle {
-    font-size: 20px;
-    margin-bottom: 15px; /* Adjusted margin */
-    text-align: left;
-  }
-
-  #home14 .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: 2.5rem; /* Adjusted font size */
   }
 
   #home14 .button {
-    padding: 20px 60px; /* Increased padding */
-    margin-bottom: 20px; /* Increased margin */
-    border: none;
-    border-radius: 10px; /* Increase border radius */
-    font-weight: bold;
-    cursor: pointer;
-    width: 300px; /* Increased width */
-    text-align: center;
-    color: black; /* Changed text color to black */
-    font-size: 18px; /* Increased font size */
-    box-sizing: border-box; /* Include padding and border in width and height */
+    width: 100%; /* Adjusted width */
+  }
+}
+
+@media (max-width: 480px) {
+  #home14 .title {
+    font-size: 2rem; /* Adjusted font size */
   }
 
-  #home14 .class6 { background-color: green; }
-  #home14 .class7 { background-color: blue; }
-  #home14 .class8 { background-color: pink; }
-  #home14 .class9 { background-color: yellow; }
-  #home14 .class10 { background-color: orange; }
-
-  /* Button hover effect */
-  #home14 .button:hover {
-    opacity: 0.8;
+  #home14 .subtitle {
+    font-size: 1.25rem; /* Adjusted font size */
   }
+
+  #home14 .button {
+    padding: 15px 30px; /* Adjusted padding */
+  }
+}
 
 
 
@@ -1414,6 +1571,171 @@ body {
         }
 
 
+        .home20 {
+    background-color: #5943F4;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+  
+  .home20 .title {
+    background-color: #5943F4;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .home20 table {
+    background-color: white;
+    border-spacing: 0;
+    max-width: 100%; /* Ensure table does not exceed container width */
+    table-layout: fixed; /* Fix table layout */
+    width: 100%; /* Expand table to fit container */
+  }
+  
+  .home20 th,
+  .home20 td {
+    padding: 5px;
+    border: 1px solid #6a00ff;
+    font-weight: bold;
+    font-size: 10px;
+    color: black;
+    height: 40px;
+    max-width: 100px; /* Limit cell width */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for long text */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .home20 th {
+    background-color: black;
+    color: white;
+  }
+  
+  .home20 th:last-child,
+  .home20 td:last-child {
+    min-width: 100px; /* Adjust minimum width for the last column (Time) */
+  }
+  
+  /* Additional Styles */
+  .home20 .class-info,
+  .home20 .time-info {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .home20 .time-cell {
+    background-color: #1DFF48;
+    color: black;
+  }
+  
+  .home20 .time-header {
+    background-color: #1DFF48;
+    color: black;
+  }
+  
+  /* Responsive CSS */
+  @media (max-width: 1300px) {
+    .home20 th,
+    .home20 td {
+      padding: 4px;
+      font-size: 9px;
+    }
+    .home20 .title,
+    .home20 .class-info{
+      font-size: 10.8px;
+    }
+    .home20 .time-info {
+        font-size: 9px;
+      }
+  }
+  
+  @media (max-width: 800px) {
+    .home20 th,
+    .home20 td {
+      padding: 3px;
+      font-size: 8px;
+    }
+    .home20 .title,
+    .home20 .class-info{
+      font-size: 8px;
+    }
+    .home20 .time-info {
+        font-size: 5.5px;
+      }
+  }
+  
+  @media (max-width: 600px) {
+    .home20 th,
+    .home20 td {
+      padding: 2px;
+      font-size: 7px;
+    }
+    .home20 .title,
+    .home20 .class-info{
+      font-size: 7.5px;
+    }
+    .home20 .time-info {
+        font-size: 5px;
+      }
+
+  }
+  
+  
+  @media (max-width: 500px) {
+    .home20 th,
+    .home20 td {
+      padding: 1px;
+      font-size: 6px;
+    }
+    
+
+    .home20 .title,
+    .home20 .class-info{
+      font-size: 7px;
+    }
+    .home20 .time-info {
+        font-size: 4.6px;
+      }
+
+  }
+  
+  @media (max-width: 400px) {
+    .home20 th,
+    .home20 td {
+      padding: 1px;
+      font-size: 5px;
+    }
+    .home20 .title,
+    .home20 .class-info{
+      font-size: 6px;
+    }
+    .home20 .time-info {
+        font-size: 4px;
+      }
+  }
+  
+  @media (max-width: 300px) {
+    .home20 th,
+    .home20 td {
+      padding: 1px;
+      font-size: 4px;
+    }
+    .home20 .title,
+    .home20 .class-info{
+      font-size: 5px;
+    }
+    .home20 .time-info {
+        font-size: 2.8px;
+      }
+  }
+  
+  
+
+
 
 
 </style>
@@ -1603,27 +1925,27 @@ body {
           <th>Class 8</th>
           <th>Class 9</th>
           <th>Class 10</th>
-          <th style="background-color: #1DFF48; color: black;">Time</th> 
+          <th class="time-cell">Time</th> 
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Friday</td>
           <td>         
-              <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Maths</p> 
-              <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Science</p>
+              <p class="class-info">Maths</p> 
+              <p class="class-info">Science</p>
           </td>
           <td>
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Science </p>
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Maths</p>
+            <p class="class-info">Science </p>
+            <p class="class-info">Maths</p>
           </td>
           <td></td>
           <td></td>
           <td></td>
           
-          <td style="background-color: #1DFF48; color: black;">
-            <p style=" padding-top: 10px; font-weight: bold; font-size: 12px">3:00 PM - 4:00 PM</p>
-            <p style=" padding-top: 10px; font-weight: bold; font-size: 12px">4:00 PM - 5:00 PM</p>
+          <td class="time-cell">
+            <p class="time-info">3:00 PM - 4:00 PM</p>
+            <p class="time-info">4:00 PM - 5:00 PM</p>
           </td>
 
         </tr>
@@ -1632,17 +1954,17 @@ body {
           <td></td>
           <td></td>
           <td>
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Maths</p>
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Science</p> 
+            <p class="class-info">Maths</p>
+            <p class="class-info">Science</p> 
           </td>
           <td>
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Science</p> 
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Maths</p>
+            <p class="class-info">Science</p> 
+            <p class="class-info">Maths</p>
           </td>
           <td></td>
-          <td style="background-color: #1DFF48; color: black;">
-          <p style=" padding-top: 10px; font-weight: bold; font-size: 12px">5:00 PM - 6:00 PM</p>
-          <p style=" padding-top: 10px; font-weight: bold; font-size: 12px">6:00 PM - 7:00 PM</p>
+          <td class="time-cell">
+          <p class="time-info">5:00 PM - 6:00 PM</p>
+          <p class="time-info">6:00 PM - 7:00 PM</p>
         </td>
         </tr>
         <tr>
@@ -1653,16 +1975,16 @@ body {
           <td></td>
 
           <td>
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;"> Maths</p> 
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Science</p>
-            <p style="padding-top: 10px; font-weight: bold; font-size: 12px;">Foundation</p>
+            <p class="class-info"> Maths</p> 
+            <p class="class-info">Science</p>
+            <p class="class-info">Foundation</p>
 
           </td>
 
-          <td style="background-color: #1DFF48; color: black;">
-            <p style=" padding-top: 10px; font-weight: bold; font-size: 12px">7:00 PM - 8:00 PM</p>
-            <p style=" padding-top: 10px; font-weight: bold; font-size: 12px">7:00 PM - 8:00 PM</p>
-            <p style=" padding-top: 10px; font-weight: bold; font-size: 12px">8:00 PM - 9:00 PM</p>
+          <td class="time-cell">
+            <p class="time-info">7:00 PM - 8:00 PM</p>
+            <p class="time-info">7:00 PM - 8:00 PM</p>
+            <p class="time-info">8:00 PM - 9:00 PM</p>
           </td>
 
         </tr>
@@ -1792,6 +2114,128 @@ body {
       </div>
     </div>
   </section>
+
+
+  <section class="home20" id="home20"> 
+    <div class="title">Class Calendar</div>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+          <th class="time-header" >Time</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>         
+              <p class="class-info">Maths</p> 
+              <p class="class-info">Science</p>
+          </td>
+          <td>
+            <p class="class-info">Science </p>
+            <p class="class-info">Maths</p>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-cell">
+            <p class="time-info">3:00 PM - 4:00 PM</p>
+            <p class="time-info">4:00 PM - 5:00 PM</p>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <p class="class-info">Maths</p>
+            <p class="class-info">Science</p> 
+          </td>
+          <td>
+            <p class="class-info">Science</p> 
+            <p class="class-info">Maths</p>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-cell">
+            <p class="time-info">5:00 PM - 6:00 PM</p>
+            <p class="time-info">6:00 PM - 7:00 PM</p>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <p class="class-info"> Maths</p> 
+            <p class="class-info">Science</p>
+            <p class="class-info">Foundation</p>
+          </td>
+          <td></td>
+          <td></td>
+          <td class="time-cell">
+            <p class="time-info">7:00 PM - 8:00 PM</p>
+            <p class="time-info">7:00 PM - 8:00 PM</p>
+            <p class="time-info">8:00 PM - 9:00 PM</p>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <p class="class-info">Maths</p>
+            <p class="class-info">Science</p> 
+          </td>
+          <td>
+            <p class="class-info">Science</p> 
+            <p class="class-info">Maths</p>
+          </td>
+          <td></td>
+          <td></td>
+          <td class="time-cell">
+            <p class="time-info">4:00 PM - 5:00 PM</p>
+            <p class="time-info">5:00 PM - 6:00 PM</p>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <p class="class-info">Maths</p>
+            <p class="class-info">Science</p> 
+          </td>
+          <td>
+            <p class="class-info">Science</p> 
+            <p class="class-info">Maths</p>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-cell">
+            <p class="time-info">3:00 PM - 4:00 PM</p>
+            <p class="time-info">4:00 PM - 5:00 PM</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</section>
+
   
 
   
