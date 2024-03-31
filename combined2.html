@@ -175,28 +175,13 @@ body {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  #home .logo h1 {
-    font-size: 10vw; /* Adjusted font size */
-  }
-
-  #home .logo h2 {
-    font-size: 6vw; /* Adjusted font size */
-  }
-
-  #home .slogan {
-    font-size: 8vw; /* Adjusted font size */
-  }
-
-  #home .menu {
-    padding: 20px; /* Adjusted padding */
-  }
-
-  #home .menu ul li {
-    font-size: 5vw; /* Adjusted font size */
-  }
-
+  #home .logo,
+  #home .slogan-menu,
+  #home .menu,
   #home .image {
-    width: 80%; /* Adjusted width */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -370,13 +355,12 @@ body {
 
 
 
-/* Section 2 Styles */
+
 #home2 {
   background-color: #6A53FF;
   color: #fff;
   padding: 20px;
-  height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* Remove height property */
 }
 
 #home2 .container {
@@ -397,13 +381,11 @@ body {
   font-size: 3rem;
   margin-top: 20px;
   margin-left: 35px;
-
 }
 
 #home2 .schedule {
   font-size: 2rem;
   margin-bottom: 20px;
-  
 }
 
 #home2 .blocks-container {
@@ -472,31 +454,113 @@ body {
 @media (max-width: 768px) {
   #home2 .container {
     padding: 0 20px; /* Add padding to container */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack flex items vertically */
+    align-items: center; /* Center flex items horizontally */
+    justify-content: center; /* Center flex items vertically */
+    height: auto; /* Remove fixed height to allow content to extend */
   }
 
   #home2 .inner-container {
-    width: 100%; /* Full width */
-    margin-bottom: 20px; /* Reduce margin */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack flex items vertically */
+    align-items: baseline; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 80%; /* Adjusted width */
+    margin: 0 auto 20px auto; /* Set margins */
   }
+  
 
   #home2 .blocks-container {
-    flex-direction: row; /* Display blocks in a row */
-    flex-wrap: wrap; /* Allow blocks to wrap to next line */
-    justify-content: center; /* Center blocks horizontally */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Display blocks in a column */
+    align-items: center; /* Center blocks horizontally */
+  }
+  @media (max-width: 768px) {
+    #home2 .schedule {
+      width: calc(100% - 40px); /* Adjusted width */
+      margin: 10px auto; /* Center horizontally */
+      margin-bottom: -19px; /* Reduce margin */
+      
+    }
+    #home2 .schedule .block {
+      width: calc(107% - 17px);
+      height: 200px;
+      margin-left: auto;
+     
+    }
+    #home2 .title {
+      text-align: center; /* Center the text */
+      margin: 20px auto 0; /* Center vertically and add top margin */
+
+    }
+
+  }
+  
+  #home2 .block
+   {
+    width: calc(100% - 40px); /* Adjusted width */
+    margin: 10px; /* Adjusted margin */
   }
 
-  #home2 .block {
-    width: calc(50% - 20px); /* Two blocks per row with margin */
-    margin: 10px; /* Adjust margin */
-  }
-
-  #home2 .schedule {
-    margin-bottom: 10px; /* Reduce margin */
-  }
+ 
 }
 
 
+@media (max-width: 1100px) {
+  #home2 .container {
+    padding: 0 20px; /* Add padding to container */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack flex items vertically */
+    align-items: center; /* Center flex items horizontally */
+    justify-content: center; /* Center flex items vertically */
+    height: auto; /* Remove fixed height to allow content to extend */
+  }
 
+  #home2 .inner-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack flex items vertically */
+    align-items: baseline; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 80%; /* Adjusted width */
+    margin: 0 auto 20px auto; /* Set margins */
+  }
+  
+
+  #home2 .blocks-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Display blocks in a column */
+    align-items: center; /* Center blocks horizontally */
+  }
+  @media (max-width: 1100px) {
+    #home2 .schedule {
+      width: calc(100% - 40px); /* Adjusted width */
+      margin: 10px auto; /* Center horizontally */
+      margin-bottom: -19px; /* Reduce margin */
+      
+    }
+    #home2 .schedule .block {
+      width: calc(100% - -5px);
+      height: 200px;
+      margin-left: auto;
+     
+    }
+    #home2 .title {
+      text-align: center; /* Center the text */
+      margin: 20px auto 0; /* Center vertically and add top margin */
+      
+    }
+
+  }
+  
+  #home2 .block
+   {
+    width: calc(100% - 40px); /* Adjusted width */
+    margin: 10px; /* Adjusted margin */
+  }
+
+ 
+}
 
 
 
@@ -943,6 +1007,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  #home3 .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+}
+
+
+@media (max-width: 768px) {
   #home3 .content {
     flex-direction: column; /* Stack items vertically on smaller screens */
     align-items: center;
@@ -953,11 +1027,15 @@ body {
     margin-bottom: 20px;
   }
 
+  
+
   #home3 .classes-buttons {
     width: 100%;
     justify-content: center;
   }
 }
+
+
 
 @media (max-width: 480px) {
   #home3 .image-container {
@@ -1033,8 +1111,21 @@ body {
 @media (max-width: 768px) {
   #home7 .text h1 {
     margin-top: 50px; /* Adjusted margin */
+    font-size: 25px;
   }
 }
+
+@media (max-width: 768px) {
+  #home7 .text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px; /* Adjust font size as needed */
+  }
+}
+
 
 
 
