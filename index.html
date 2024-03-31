@@ -379,9 +379,9 @@ body {
 }
 
 #home2 .title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-top: 20px;
-  margin-left: 35px;
+  margin-left: -5px;
 }
 
 #home2 .schedule {
@@ -449,7 +449,7 @@ body {
 /* Increase the height of only the Scheduled Classes block */
 #home2 .schedule .block {
   height: 391px;
-  width: 100%;
+  width: 225px;
 }
 
 @media (max-width: 768px) {
@@ -650,6 +650,19 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Adjustments for tablets and smaller devices */
+  #home6 .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+  }
+
+  #home6 .content {
+    width: 90%; /* Adjusted width */
+    margin: 0 auto; /* Center content horizontally */
+  }
+
   #home6 .content h2 {
     font-size: 2.5rem; /* Adjusted font size */
   }
@@ -660,15 +673,16 @@ body {
 }
 
 @media (max-width: 480px) {
-  #home6 .container {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
+  /* Adjustments for mobile devices */
+  #home6 .content h2 {
+    font-size: 2rem; /* Further decrease text size */
   }
-  
-  #home6 .image-container,
-  #home6 .content {
-    max-width: 100%; /* Full width for both elements on smaller screens */
+
+  #home6 .content p {
+    font-size: 1.4rem; /* Further decrease text size */
   }
 }
+
 
 
 
