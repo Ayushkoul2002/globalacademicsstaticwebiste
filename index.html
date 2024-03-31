@@ -571,13 +571,15 @@ body {
 #home6 {
   background-color: #5943F4;
   padding: 50px 20px; /* Adjusted padding */
+  height: 100vh; /* Ensure section fills viewport height */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 #home6 .container {
   display: flex;
   flex-wrap: wrap; /* Allow elements to wrap */
-  justify-content: center;
-  align-items: center;
 }
 
 #home6 .image-container {
@@ -590,21 +592,6 @@ body {
 #home6 .image-container img {
   width: 100%;
   border-radius: 15px; /* Added border radius */
-  animation: slide-in 1s ease forwards; /* Animate image */
-  animation-delay: 0.5s; /* Delay animation */
-  animation-fill-mode: both; /* Maintain final state of animation */
-  animation-timing-function: ease-in-out; /* Smooth animation */
-  animation-iteration-count: infinite; /* Make the animation repeat infinitely */
-  animation-direction: alternate; /* Make the animation alternate direction */
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(-5%);
-  }
-  to {
-    transform: translateX(5%);
-  }
 }
 
 #home6 .content {
@@ -652,15 +639,17 @@ body {
 @media (max-width: 768px) {
   /* Adjustments for tablets and smaller devices */
   #home6 .container {
-    display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text */
+  }
+
+  #home6 .image-container,
+  #home6 .content {
+    max-width: 100%; /* Full width for both elements on smaller screens */
   }
 
   #home6 .content {
-    width: 90%; /* Adjusted width */
-    margin: 0 auto; /* Center content horizontally */
+    margin-top: 20px; /* Add space between image and content */
   }
 
   #home6 .content h2 {
@@ -682,8 +671,6 @@ body {
     font-size: 1.4rem; /* Further decrease text size */
   }
 }
-
-
 
 
 
