@@ -15,10 +15,17 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            gap: 30px;
         }
         
-        .content {
+        .content-wrapper {
+            display: flex;
+            flex-direction: column; /* Stack items in a column */
+            align-items: center; /* Center all items horizontally */
             max-width: 50%;
+        }
+
+        .content {
             text-align: center; /* Center-align content */
             margin-bottom: 20px;
         }
@@ -70,7 +77,7 @@
             background-color: #ff9800;
         }
 
-        .about-teacher {
+       .about-teacher {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -91,7 +98,16 @@
 
         /* Media query for mobile devices */
         @media only screen and (max-width: 768px) {
-            .content, .teacher-info {
+            body {
+                display: flex;
+                flex-direction: column; /* Stack items in a column */
+                justify-content: flex-start; /* Align items at the start */
+                align-items: flex-start; /* Align items at the start */
+                height: auto;
+                gap: 0;
+            }
+
+            .content-wrapper, .teacher-info {
                 max-width: 80%;
                 margin: 0 auto; /* Center-align content */
             }
@@ -105,14 +121,25 @@
                 width: 150px; /* Reduce image size for better mobile view */
                 height: 150px;
             }
+
+            .teacher-info {
+                flex-direction: row; /* Display elements in a row for mobile view */
+                align-items: flex-start; /* Align elements at the start of the flex container */
+            }
+
+            .teacher-image {
+                margin-right: 20px; /* Add space between image and other content */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Meet Our Faculty</h1>
-        <p>Our faculty, comprising mostly IITians, are not just teachers but mentors who guide students through their academic journey. They bring a wealth of experience and a passion for teaching, ensuring that each lesson is engaging, informative, and inspiring. Meet the dedicated individuals who are at the heart of our educational journey.</p>
-        <button>Visit PROFILE</button>
+    <div class="content-wrapper">
+        <div class="content">
+            <h1>Meet Our Faculty</h1>
+            <p>Our faculty, comprising mostly IITians, are not just teachers but mentors who guide students through their academic journey. They bring a wealth of experience and a passion for teaching, ensuring that each lesson is engaging, informative, and inspiring. Meet the dedicated individuals who are at the heart of our educational journey.</p>
+            <button>Visit PROFILE</button>
+        </div>
     </div>
     <div class="teacher-info">
         <div class="teacher-image">

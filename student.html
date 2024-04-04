@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student of the Week</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4b0082;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: right; /* Align text to the right */
+            display: flex; /* Display items in a row */
+            justify-content: space-between; /* Spacing between items */
+            align-items: center; /* Center vertically */
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-right: 60px;
+            animation: zoomIn 1s ease-out; /* Apply the animation */
+        }
+
+        .image-container img {
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+
+        .emoji-bottom {
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .container {
+                flex-direction: column; /* Change to column layout for smaller screens */
+                text-align: center; /* Center-align text */
+            }
+
+            .image-container {
+                margin-bottom: 20px; /* Add space between image and text */
+                margin-right: 0px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+    
+            p {
+                text-align: center;
+            }
+        }
+
+        /* Keyframe animation */
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="teacher.jpg" alt="Student Photo">
+        </div>
+        <div>
+            <h1>6. Student of the Week</h1>
+            <p>In the classroom, acknowledging these high-achievers is an opportunity to highlight the positive aspects of healthy competition. It encourages students to set personal goals, work diligently, and strive for excellence.</p>
+        </div>
+    </div>
+</body>
+</html>
