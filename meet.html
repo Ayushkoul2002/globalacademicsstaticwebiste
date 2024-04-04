@@ -19,19 +19,21 @@
         
         .content {
             max-width: 50%;
-            text-align: left;
+            text-align: center; /* Center-align content */
             margin-bottom: 20px;
         }
 
         .teacher-info {
             max-width: 50%;
-            text-align: left;
+            text-align: center; /* Center-align teacher info */
             display: flex;
             flex-direction: column; /* Stack items in a column */
             align-items: center; /* Center all items horizontally */
+            position: relative; /* Position relative for absolute positioning */
         }
         
         .teacher-image {
+            position: relative; /* Position relative for z-index stacking */
             width: 200px;
             height: 200px;
             border-radius: 50%;
@@ -42,6 +44,7 @@
             display: flex;
             justify-content: center; /* Center image horizontally */
             align-items: center; /* Center image vertically */
+            z-index: 1; /* Ensure image is above pink box */
         }
         
         .teacher-image img {
@@ -60,6 +63,7 @@
             font-weight: bold;
             transition: background-color 0.3s;
             font-size: 18px;
+            margin-top: 20px; /* Add spacing between content and button */
         }
         
         button:hover {
@@ -67,11 +71,22 @@
         }
 
         .about-teacher {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-7%, 9%);
             background-color: #ff9999;
             padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            text-align: center; /* Center text horizontally */
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            z-index: 2;
+            height: 150px;
+            width: 150px;
+        }
+
+        .about-teacher h2, .about-teacher p {
+            margin: 0; /* Remove default margin for cleaner look */
         }
 
         /* Media query for mobile devices */
@@ -83,7 +98,6 @@
 
             .teacher-info {
                 max-width: 100%; /* Make teacher info full width */
-                align-items: center; /* Center all items horizontally */
             }
 
             .teacher-image {
@@ -106,7 +120,7 @@
         </div>
         <div class="about-teacher">
             <h2>About Teacher</h2>
-            <p>Insert details about the teacher and their area of expertise here.</p>
+            <p>Dr. Smith is a renowned</p>
         </div>
     </div>
 </body>
