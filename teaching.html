@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Teaching Techniques</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Text color set to white */
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 20px; /* Add some space between heading and boxes */
+    color: #6a00ff; /* Set purple color for heading */
+  }
+
+  .container {
+    background-color: #6a00ff; /* Purple color */
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    perspective: 1500px; /* Add perspective for 3D effect */
+  }
+
+  .step {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color:  #8b72ff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s; /* Add transition for smooth hover effect */
+  }
+
+  .step:hover {
+    transform: translateY(-10px); /* Move card up on hover */
+  }
+
+  .step img {
+    width: 200px; /* Increased size for the image */
+    height: 200px; /* Increased size for the image */
+    margin-bottom: 20px; /* Space between image and text */
+  }
+
+  .step h3 {
+    color: #333333; /* Black text */
+    font-size: 18px; /* Increased font size */
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    color: #666666; /* Dark gray text */
+    font-size: 14px; /* Increased font size */
+  }
+</style>
+</head>
+<body>
+
+<h1 class="heading">Our Teaching Techniques</h1>
+
+<div class="container">
+  <div class="step">
+    <img src="teaching.png" alt="Interactive Teaching Icon">
+    <h3>Step 1</h3>
+    <p>Interactive Teaching: We will engage students by delivering comprehensive subject instruction during interactive classes.</p>
+  </div>
+
+  <div class="step">
+    <img src="problemsolving.png" alt="Problem-Solving Practices Icon">
+    <h3>Step 2</h3>
+    <p>Problem-Solving Practice: We will reinforce learning through hands-on problem-solving sessions, guiding students to apply knowledge.</p>
+  </div>
+
+  <div class="step">
+    <img src="exam.png" alt="Exam-Ready Assessments Icon">
+    <h3>Step 3</h3>
+    <p>Exam-Ready Assessments: We will evaluate progress through regular exams, refining strategies to enhance overall exam preparedness.</p>
+  </div>
+</div>
+
+</body>
+</html>
