@@ -35,41 +35,41 @@
         }
 
         .bar {
-            width: 80px;
+            flex: 1; /* Make bars expand to fill available space */
             background-color: #7bed9f;
-            border-radius: 50px;
-            margin: 0 10px;
+            border-radius: 10px; /* Adjust border radius for bar ends */
+            margin: 0 5px; /* Reduce margin between bars */
             text-align: center;
-            padding: 20px 0;
             box-sizing: border-box;
             position: relative;
             display: flex;
             justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
+            align-items: flex-end; /* Align bar text to bottom */
+            transition: height 0.5s; /* Add smooth transition for height change */
         }
 
         .bar:nth-child(1) {
-            height: 100px;
+            order: 3; /* Bring the first bar to the last position */
         }
 
         .bar:nth-child(2) {
-            height: 150px;
+            order: 2; /* Bring the second bar to the middle position */
         }
 
         .bar:nth-child(3) {
-            height: 200px;
+            order: 1; /* Bring the third bar to the first position */
+        }
+
+        .bar span {
+            position: absolute;
+            bottom: 5px; /* Adjust the spacing between bar and text */
+            font-size: 1rem;
         }
 
         .bar-labels {
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            margin-top: 10px; /* Add some spacing between bars and labels */
         }
 
         .bar-labels span {
@@ -90,15 +90,14 @@
         <h1>5. Recognition</h1>
         <p>Recognizing and celebrating the top 3 ranking students each week is not just about showcasing achievements; it's about creating a culture of motivation and healthy competition within our tuition center.</p>
         <div class="bar-container">
-            <div class="bar">3</div>
-            <div class="bar">2</div>
-            <div class="bar">1</div>
+            <div class="bar" style="height: 200px;"><span>1</span></div>
+            <div class="bar" style="height: 150px;"><span>2</span></div>
+            <div class="bar" style="height: 100px;"><span>3</span></div>
         </div>
         <div class="bar-labels">
-            <span>10</span>
-            <span>12</span>
-            <span>14</span>
-            <span>16</span>
+            <span>Rank 3</span>
+            <span>Rank 2</span>
+            <span>Rank 1</span>
         </div>
     </div>
 </body>
