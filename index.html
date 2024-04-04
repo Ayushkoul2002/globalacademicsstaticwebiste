@@ -1179,6 +1179,68 @@ html {
 }
 
 
+#home7a {
+            background-color: #6a5acd;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #home7a .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%; /* Changed to 100% */
+        }
+
+        #home7a .agenda {
+            text-align: left;
+            font-size: 140%; /* Increased font size by 40% */
+        }
+
+        #home7a .reminders {
+            background-color: #ff9999;
+            border-radius: 50%;
+            color: black;
+            width: 280px; /* Increased width by 40% */
+            height: 280px; /* Increased height by 40% */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 28px; /* Increased padding by 40% */
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        #home7a .icon {
+            background-color: #ffcc66;
+            border-radius: 50%;
+            width: 112px; /* Increased width by 40% */
+            height: 112px; /* Increased height by 40% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: -56px; /* Increased bottom position by 40% */
+            right: -56px; /* Increased right position by 40% */
+        }
+
+        @media only screen and (max-width: 768px) {
+            #home7a .container {
+                flex-direction: column; /* Changed flex-direction to column for mobile */
+                align-items: center; /* Center-align items for mobile */
+            }
+
+            #home7a .agenda {
+                margin-bottom: 20px; /* Added margin-bottom for spacing */
+            }
+        }
 
 
 #home8 {
@@ -2380,6 +2442,30 @@ button:hover {
       </div>
     </div>
   </section>
+
+  <section class="home7a" id="home7a">
+    <div class="container">
+        <div class="agenda">
+            <h1>1. Today's Agenda</h1>
+            <p>We will showcase the lessons or activities that the class has for the day.</p>
+            <p>This can be broken down by:</p>
+            <ul>
+                <li>Blocks of time</li>
+                <li>Activity</li>
+                <li>Subject</li>
+            </ul>
+        </div>
+        <div class="reminders">
+            <h2>Reminders</h2>
+            <p>Aim is to Help the students remember things that they need to accomplish within the day.</p>
+            <div class="icon">😄</div>
+        </div>
+    </div>
+</section>
+
+
+
+
 
 
   <section class="home8" id="home8">
