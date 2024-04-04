@@ -1179,6 +1179,68 @@ html {
 }
 
 
+#home7a {
+            background-color: #6a5acd;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #home7a .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%; /* Changed to 100% */
+        }
+
+        #home7a .agenda {
+            text-align: left;
+            font-size: 140%; /* Increased font size by 40% */
+        }
+
+        #home7a .reminders {
+            background-color: #ff9999;
+            border-radius: 50%;
+            color: black;
+            width: 280px; /* Increased width by 40% */
+            height: 280px; /* Increased height by 40% */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 28px; /* Increased padding by 40% */
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        #home7a .icon {
+            background-color: #ffcc66;
+            border-radius: 50%;
+            width: 112px; /* Increased width by 40% */
+            height: 112px; /* Increased height by 40% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: -56px; /* Increased bottom position by 40% */
+            right: -56px; /* Increased right position by 40% */
+        }
+
+        @media only screen and (max-width: 768px) {
+            #home7a .container {
+                flex-direction: column; /* Changed flex-direction to column for mobile */
+                align-items: center; /* Center-align items for mobile */
+            }
+
+            #home7a .agenda {
+                margin-bottom: 20px; /* Added margin-bottom for spacing */
+            }
+        }
 
 
 #home8 {
@@ -1599,10 +1661,168 @@ html {
 
   #home14 .subtitle {
     font-size: 1.25rem; /* Adjusted font size */
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   #home14 .button {
     padding: 15px 30px; /* Adjusted padding */
+  }
+}
+
+
+#home15 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #6a5acd;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+}
+
+#home15 .container {
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#home15 .content-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#home15 .content {
+  max-width: 80%;
+}
+
+#home15 .content p{
+  font-size: 16px;
+  margin: 20px;
+}
+
+#home15 .content h1{
+  font-size: 20px;
+ 
+}
+
+#home15 .teacher-info {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+#home15 .teacher-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home15 .teacher-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#home15 .about-teacher {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-7%, -54%);
+  background-color: #ff9999;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 2;
+  height: 200px;
+  width: 200px;
+}
+
+#home15 .about-teacher h2, .about-teacher p {
+  margin: 0;
+}
+
+button {
+  background-color: #ffc107;
+  color: #333;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff9800;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  #home15 .content {
+    max-width: 100%;
+  }
+
+  #home15 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #6a5acd;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 30px;
+    padding-bottom: 100px;
+}
+  #home15 .container {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home15 .about-teacher {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-7%, -54%);
+    background-color: #ff9999;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 2;
+    height: 150px;
+    width: 150px;
+}
+
+  #home15 .teacher-info {
+    max-width: 100%;
+  }
+
+  #home15 .teacher-image {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -2223,6 +2443,30 @@ html {
     </div>
   </section>
 
+  <section class="home7a" id="home7a">
+    <div class="container">
+        <div class="agenda">
+            <h1>1. Today's Agenda</h1>
+            <p>We will showcase the lessons or activities that the class has for the day.</p>
+            <p>This can be broken down by:</p>
+            <ul>
+                <li>Blocks of time</li>
+                <li>Activity</li>
+                <li>Subject</li>
+            </ul>
+        </div>
+        <div class="reminders">
+            <h2>Reminders</h2>
+            <p>Aim is to Help the students remember things that they need to accomplish within the day.</p>
+            <div class="icon">😄</div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
 
   <section class="home8" id="home8">
   <div class="container">
@@ -2388,6 +2632,29 @@ html {
       </div>
     </div>
   </section>
+
+
+  <section id="home15" class="home15">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="content">
+          <h1>Meet Our Faculty</h1>
+          <p>Our faculty, comprising mostly IITians, are not just teachers but mentors who guide students through their academic journey. They bring a wealth of experience and a passion for teaching, ensuring that each lesson is engaging, informative, and inspiring. Meet the dedicated individuals who are at the heart of our educational journey.</p>
+          <button>Visit PROFILE</button>
+        </div>
+      </div>
+      <div class="teacher-info">
+        <div class="teacher-image">
+          <img src="teacher.jpg" alt="Teacher's Image">
+        </div>
+        <div class="about-teacher">
+          <h2>About Teacher</h2>
+          <p>Dr. Smith is a renowned</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
 
   <section class="home17" id="home17">
