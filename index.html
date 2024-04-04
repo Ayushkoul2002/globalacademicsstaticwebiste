@@ -687,37 +687,42 @@ body {
 
 
 
-/* css for section 4 */
+/* css for section 5 */
 .home5 {
     background-color: #5943F4;
+    padding: 40px;
+    height: 500px;
+    display: flex; /* Use flexbox to center the table */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column;
+}
+
+.home5 .title {
+    color: white;
     padding: 10px;
-    margin-bottom: 20px;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-  }
-  
-  .home5 .title {
-    background-color: #5943F4;
-    padding: 10px;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
-  }
-  
-  .home5 table {
+}
+
+.home5 table {
     background-color: white;
     border-spacing: 0;
     max-width: 100%; /* Ensure table does not exceed container width */
     table-layout: fixed; /* Fix table layout */
-    width: 100%; /* Expand table to fit container */
-  }
+    width: 85%; /* Expand table to fit container */
+    margin: auto; /* Center the table horizontally */
+}
+
   
   .home5 th,
   .home5 td {
     padding: 5px;
     border: 1px solid #6a00ff;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 16px;
     color: black;
     height: 40px;
     max-width: 100px; /* Limit cell width */
@@ -761,7 +766,13 @@ body {
       padding: 4px;
       font-size: 9px;
     }
-    .home5 .title,
+
+    .home5 .title {
+     
+      font-size: 30px;
+    
+  }
+    
     .home5 .class-info{
       font-size: 10.8px;
     }
@@ -776,7 +787,12 @@ body {
       padding: 3px;
       font-size: 8px;
     }
-    .home5 .title,
+    .home5 .title {
+     
+      font-size: 20px;
+    
+  }
+   
     .home5 .class-info{
       font-size: 8px;
     }
@@ -791,7 +807,7 @@ body {
       padding: 2px;
       font-size: 7px;
     }
-    .home5 .title,
+    
     .home5 .class-info{
       font-size: 7.5px;
     }
@@ -806,12 +822,12 @@ body {
       padding: 1px;
       font-size: 6px;
     }
-    .home5 .title,
+   
     .home5 .class-info{
-      font-size: 7px;
+      font-size: 4.8px;
     }
     .home5 .time-info {
-      font-size: 4.6px;
+      font-size: 4.2px;
     }
   }
   
@@ -821,7 +837,7 @@ body {
       padding: 1px;
       font-size: 5px;
     }
-    .home5 .title,
+    
     .home5 .class-info{
       font-size: 6px;
     }
@@ -836,7 +852,7 @@ body {
       padding: 1px;
       font-size: 4px;
     }
-    .home5 .title,
+    
     .home5 .class-info{
       font-size: 5px;
     }
@@ -1140,8 +1156,6 @@ body {
     font-size: 14px; /* Adjust font size as needed */
   }
 }
-
-
 
 
 
