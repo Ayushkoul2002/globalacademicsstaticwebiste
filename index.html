@@ -1359,6 +1359,92 @@ html {
 
 
 
+#home12 {
+  font-family: Arial, sans-serif;
+  background-color: #4b0082;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#home12 .container {
+  max-width: 800px;
+  text-align: right; /* Align text to the right */
+  display: flex; /* Display items in a row */
+  justify-content: space-between; /* Spacing between items */
+  align-items: center; /* Center vertically */
+}
+
+#home12 .image-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 60px;
+  animation: zoomIn 1s ease-out; /* Apply the animation */
+}
+
+#home12 .image-container img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+#home12 .emoji-bottom {
+  margin-top: 20px;
+}
+
+#home12 h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#home12 p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  #home12 body {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #home12 .container {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    text-align: center; /* Center-align text */
+  }
+
+  #home12 .image-container {
+    margin-bottom: 20px; /* Add space between image and text */
+    margin-right: 0px;
+  }
+
+  #home12 h1 {
+    text-align: center;
+  }
+
+  #home12 p {
+    text-align: center;
+  }
+}
+
+/* Keyframe animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
 
 #home14 {
   margin: 0;
@@ -2151,6 +2237,22 @@ html {
   </section>
 
 
+
+
+  <section class="home12" id="home12">
+    <div class="container">
+      <div class="image-container">
+        <img src="teacher.jpg" alt="Student Photo">
+      </div>
+      <div>
+        <h1>6. Student of the Week</h1>
+        <p>In the classroom, acknowledging these high-achievers is an opportunity to highlight the positive aspects of healthy competition. It encourages students to set personal goals, work diligently, and strive for excellence.</p>
+      </div>
+    </div>
+  </section>
+  
+
+
   <section class="home5" id="home5"> 
     <div class="title">Class Calendar</div>
     <table>
@@ -2228,6 +2330,9 @@ html {
       </tbody>
     </table>
   </section>
+
+
+
 
 
   <section class="home14" id="home14">
