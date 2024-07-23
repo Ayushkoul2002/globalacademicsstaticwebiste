@@ -1075,157 +1075,236 @@ html {
 
 
 
-/* Section 3 Styles */
 
-/* Section 3 Styles */
-#home3 .title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #fff; /* Adjusted text color */
-}
+    .wave {
+      background: #001c808a;
+      border-radius: 1000% 1000% 0 0;
+      position: absolute;
+      width: 200%;
+      height: 12em;
+      animation: wave 10s linear infinite;
+      transform: translate3d(0, 0, 0);
+      opacity: 0.8;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
 
-#home3 {
-  background-color: blue;
-  padding: 50px 20px; /* Adjusted padding */
-}
+    .wave:nth-of-type(2) {
+      bottom: -1.25em;
+      animation: wave 18s linear reverse infinite;
+      opacity: 0.8;
+    }
 
-#home3 .container {
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    .wave:nth-of-type(3) {
+      bottom: -2.5em;
+      animation: wave 20s -1s reverse infinite;
+      opacity: 0.9;
+    }
 
-#home3 .content {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
+    @keyframes wave {
+      2% {
+        transform: translateX(1);
+      }
+      25% {
+        transform: translateX(-25%);
+      }
+      50% {
+        transform: translateX(-50%);
+      }
+      75% {
+        transform: translateX(-25%);
+      }
+      100% {
+        transform: translateX(1);
+      }
+    }
 
-#home3 .image-container {
-  flex: 1;
-  max-width: 45%; /* Adjusted max-width */
-  max-height: 70%;
-  border-radius: 15px;
-  overflow: hidden;
-  margin-right: 20px;
-  animation: floatAnimation 5s infinite alternate; /* Added animation */
-}
+    /* Section 3 Styles */
+    #home3 .title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #fff; /* Adjusted text color */
+    }
 
-#home3 .image-container img {
-  display: block;
-  width: 70%;
-  height: auto;
-  border-radius: 15px;
-}
+    #home3 {
+      background: linear-gradient(120deg, #fdc2c2 0%, #8fdbf4 100%);
+      background-size: 200% 200%;
+      animation: gradientAnimation 15s ease infinite, backgroundPositionAnimation 10s ease infinite;
+      padding: 50px 20px; /* Adjusted padding */
+      position: relative;
+      overflow: hidden;
+    }
 
-#home3 .classes-buttons {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 20px;
-}
+    #home3::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+      opacity: 0.2;
+      z-index: 1;
+    }
 
-#home3 .classes-buttons button {
-  background-color: #05006b;
-  color: white;
-  padding: 25px 50px; /* Adjusted padding */
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 20px; /* Adjusted font size */
-  box-sizing: border-box;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Adjusted transition */
-}
+    #home3 .container {
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
 
-#home3 .classes-buttons button:hover {
-  background-color: #001f5b;
-  transform: scale(1.05); /* Slightly increased scale on hover */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Added box-shadow on hover */
-}
+    #home3 .content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-#home3 .classes-buttons button:active {
-  background-color: #002080;
-}
+    #home3 .image-container {
+      flex: 1;
+      max-width: 45%; /* Adjusted max-width */
+      max-height: 70%;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-right: 20px;
+      animation: floatAnimation 5s infinite alternate; /* Added animation */
+    }
 
-#home3 .social-icons {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-}
+    #home3 .image-container img {
+      display: block;
+      width: 70%;
+      height: auto;
+      border-radius: 15px;
+    }
 
-#home3 .social-icons i {
-  font-size: 24px;
-  margin: 0 10px;
-  color: white;
-  transition: color 0.3s ease;
-}
+    #home3 .classes-buttons {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 20px;
+    }
 
-#home3 .social-icons i:hover {
-  color: #ff4081;
-}
+    #home3 .classes-buttons button {
+      background-color: #05006b;
+      color: white;
+      padding: 25px 50px; /* Adjusted padding */
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 20px; /* Adjusted font size */
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Adjusted transition */
+    }
 
-@keyframes floatAnimation {
-  0% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
+    #home3 .classes-buttons button:hover {
+      background-color: #001f5b;
+      transform: scale(1.05); /* Slightly increased scale on hover */
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Added box-shadow on hover */
+    }
 
-@media (max-width: 1024px) {
-  #home3 .image-container {
-    max-width: 50%; /* Adjusted width */
-  }
-}
+    #home3 .classes-buttons button:active {
+      background-color: #002080;
+    }
 
-@media (max-width: 768px) {
-  #home3 .image-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-  }
-}
+    #home3 .social-icons {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #home3 .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    #home3 .social-icons i:hover {
+      color: #ff4081;
+    }
+
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes backgroundPositionAnimation {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      #home3 .image-container {
+        max-width: 50%; /* Adjusted width */
+      }
+    }
+
+    @media (max-width: 768px) {
+      #home3 .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #home3 .content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+      }
+
+      #home3 .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      #home3 .classes-buttons {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #home3 .image-container {
+        max-width: 100%;
+      }
+
+      #home3 .classes-buttons button {
+        padding: 20px 40px;
+      }
+    }
 
 
-@media (max-width: 768px) {
-  #home3 .content {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center;
-  }
-
-  #home3 .image-container {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  
-
-  #home3 .classes-buttons {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-
-
-@media (max-width: 480px) {
-  #home3 .image-container {
-    max-width: 100%;
-  }
-
-  #home3 .classes-buttons button {
-    padding: 20px 40px;
-  }
-}
 
 
 .home7 {
@@ -1310,90 +1389,325 @@ html {
 
 
 #home7a {
-            background-color: #6a5acd;
-            font-family: Arial, sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+    position: relative; /* Make sure the parent element is positioned */
+    background: #6a5acd; /* Fallback color */
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Ensure no overflow */
+}
 
-        #home7a .container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%; /* Changed to 100% */
-            padding:30px;
-        }
+#home7a .container {
+    position: relative; /* To position content correctly */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Changed to 100% */
+    padding: 30px;
+    z-index: 1; /* Ensure content is above background */
+}
 
-        #home7a .agenda {
-            text-align: left;
-            font-size: 140%; /* Increased font size by 40% */
-        }
+#home7a .agenda {
+    text-align: left;
+    font-size: 140%; /* Increased font size by 40% */
+}
 
-        #home7a .reminders {
-            background-color: #ff9999;
-            border-radius: 50%;
-            color: black;
-            width: 280px; /* Increased width by 40% */
-            height: 280px; /* Increased height by 40% */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 28px; /* Increased padding by 40% */
-            box-sizing: border-box;
-            position: relative;
-        }
+#home7a .reminders {
+    background-color: #ff9999;
+    border-radius: 50%;
+    color: black;
+    width: 280px; /* Increased width by 40% */
+    height: 280px; /* Increased height by 40% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 28px; /* Increased padding by 40% */
+    box-sizing: border-box;
+    position: relative;
+}
 
-        #home7a .icon {
-          background-color: #ffcc66;
-          border-radius: 50%;
-          width: 112px;
-          height: 112px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          bottom: -29px;
-          right: -15px;
-        }
+#home7a .icon {
+    background-color: #ffcc66;
+    border-radius: 50%;
+    width: 112px;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -29px;
+    right: -15px;
+}
 
-        @media only screen and (max-width: 768px) {
-            #home7a .container {
-                flex-direction: column; /* Changed flex-direction to column for mobile */
-                align-items: center; /* Center-align items for mobile */
-            }
+@media only screen and (max-width: 768px) {
+    #home7a .container {
+        flex-direction: column; /* Changed flex-direction to column for mobile */
+        align-items: center; /* Center-align items for mobile */
+    }
 
-            #home7a .agenda {
-                margin-bottom: 20px; /* Added margin-bottom for spacing */
-            }
-        }
+    #home7a .agenda {
+        margin-bottom: 20px; /* Added margin-bottom for spacing */
+    }
+}
+
+/* Animation styles */
+.context {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Ensure it’s above other content */
+}
+
+.context h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4e54c8;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    overflow: hidden;
+    z-index: 0; /* Ensure background is behind content */
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
 
 
-#home8 {
+.home8 {
+  position: relative;
   margin: 0;
   padding: 0;
   background-color: #6a00ff;
   font-family: Arial, sans-serif;
   color: white;
+  overflow: hidden; /* Ensure no overflow */
 }
 
+.bubbles {
+  position: absolute;
+  bottom: 0; /* Ensure bubbles start from the bottom */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Ensure bubbles are behind the content */
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: hsla(183, 94%, 76%, 0.3);
+  animation: float-up 15s linear infinite;
+}
+
+/* Bubble sizes and positions */
+.bubble:nth-child(1) {
+  left: 15%;
+  width: 80px;
+  height: 80px;
+  animation-duration: 20s;
+}
+
+.bubble:nth-child(2) {
+  left: 30%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 25s;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(3) {
+  left: 45%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 30s;
+  animation-delay: 10s;
+}
+
+.bubble:nth-child(4) {
+  left: 60%;
+  width: 70px;
+  height: 70px;
+  animation-duration: 22s;
+  animation-delay: 15s;
+}
+
+.bubble:nth-child(5) {
+  left: 75%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 18s;
+}
+
+.bubble:nth-child(6) {
+  left: 85%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 28s;
+  animation-delay: 7s;
+}
+
+.bubble:nth-child(7) {
+  left: 25%;
+  width: 90px;
+  height: 90px;
+  animation-duration: 33s;
+  animation-delay: 12s;
+}
+
+.bubble:nth-child(8) {
+  left: 40%;
+  width: 55px;
+  height: 55px;
+  animation-duration: 20s;
+  animation-delay: 20s;
+}
+
+@keyframes float-up {
+  from {
+    transform: translateY(100vh); /* Start from bottom */
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh); /* Move to top */
+    opacity: 0;
+  }
+}
+
+/* Additional styling for home8 content */
 #home8 .container {
+  position: relative; /* To position content correctly */
   padding: 50px;
   text-align: center;
+  z-index: 1; /* Ensure content is above background */
 }
 
 #home8 .heading {
-  text-align: center;
-    color: white;
-    font-size: 30px;
-    padding: 20px;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
 }
-
 
 #home8 .steps-container {
   display: flex;
@@ -1406,7 +1720,10 @@ html {
   width: 30%;
   margin: 20px;
   padding: 20px;
-  background-color: #8b72ff;
+  background-color:#ff7272;
+  border-style: solid;
+  border-color: black;
+
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -1432,7 +1749,7 @@ html {
 }
 
 #home8 .step p {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 14px;
 }
 
@@ -1448,22 +1765,171 @@ html {
 }
 
 
+#home9 {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+#home9 header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#home9 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#home9 .section {
+  width: calc(33.33% - 20px);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#home9 .section h2 {
+  margin-top: 0;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+#home9 .section:nth-child(1) {
+  background-color: #edae39; /* Orange color for "Upcoming Events" */
+  color: #ffffff;
+}
+
+#home9 .section:nth-child(2) {
+  background-color: #ADD8E6; /* Light blue color for "Student Achievements" */
+  color: #000000;
+}
+
+#home9 .section:nth-child(3) {
+  background-color: #2a2e24; /* Dark green color for "Curriculum Updates" */
+  color: #ffffff;
+}
+
+#home9 .box {
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+#home9 .box img {
+  max-width: 100%;
+  height: auto;
+}
+
+#home9 .section p {
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+#home9 .section:nth-child(1) p {
+  color: #ADD8E6;
+}
+
+#home9 .section:nth-child(2) p {
+  color: #000000;
+}
+
+#home9 .section:nth-child(3) p {
+  color: #ADD8E6;
+}
 
 
 
-/* Section 10 Styles */
+
+
+
+/* Existing styles for #home10 */
 #home10 {
+  position: relative; /* Ensure it can contain the stars absolutely positioned */
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #6a53ff; /* Solid purple background */
+  background-color: black; /* Solid black background */
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* Ensure stars do not overflow the section */
 }
 
+/* Stars animation styles */
+.stars {
+  position: absolute; /* Make it float over the #home10 section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  transform: rotate(-45deg);
+  pointer-events: none; /* Ensure stars don't interfere with other interactions */
+}
+
+.star {
+  position: absolute;
+  background: linear-gradient(45deg, #ffffff, transparent);
+  border-radius: 50%;
+  width: 2px; /* Small star size */
+  height: 2px; /* Small star size */
+  animation: fall 10s linear infinite, tail-fade 9s ease-out infinite;
+}
+
+/* Keyframes for animations */
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+@keyframes tail-fade {
+  0%, 50% {
+    width: 2px; /* Fixed width for demonstration */
+    opacity: 1;
+  }
+  70%, 80% {
+    width: 0;
+    opacity: 0.4;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+/* Add star positions and sizes */
+.star:nth-child(1) { top: 10%; left: 20%; width: 3px; height: 3px; animation-duration: 8s; }
+.star:nth-child(2) { top: 30%; left: 40%; width: 2px; height: 2px; animation-duration: 9s; }
+.star:nth-child(3) { top: 50%; left: 10%; width: 4px; height: 4px; animation-duration: 7s; }
+.star:nth-child(4) { top: 70%; left: 50%; width: 2px; height: 2px; animation-duration: 10s; }
+.star:nth-child(5) { top: 20%; left: 70%; width: 3px; height: 3px; animation-duration: 9s; }
+/* Add more fixed positions as needed */
+
+/* Section 10 Container and Buttons Styles */
 #home10 .container {
   display: flex;
   justify-content: space-between;
@@ -1471,6 +1937,7 @@ html {
   width: 80%; /* Adjusted width */
   padding: 20px; /* Adjusted padding */
   border-radius: 10px;
+  z-index: 1; /* Ensure it appears above the stars */
 }
 
 #home10 .left-section {
@@ -1522,8 +1989,8 @@ html {
   transition: opacity 0.3s ease; /* Added transition for hover effect */
 }
 
-#home10 .class6 { background-color: #20cd8d;}
-#home10 .class7 { background-color: #C2FFE5 }
+#home10 .class6 { background-color: #20cd8d; }
+#home10 .class7 { background-color: #C2FFE5; }
 #home10 .class8 { background-color: pink; }
 #home10 .class9 { background-color: yellow; }
 #home10 .class10 { background-color: orange; }
@@ -1572,7 +2039,7 @@ html {
     font-size: 1.25rem;
     text-align: center;
     margin-bottom: 25px;
-}
+  }
 
   #home10 .button {
     padding: 15px 30px; /* Adjusted padding */
@@ -1580,24 +2047,95 @@ html {
 }
 
 
-
 #home12 {
   font-family: Arial, sans-serif;
-  background-color: #4b0082;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  position: relative; /* Ensure that clouds are positioned relative to this section */
+  overflow: hidden; /* Ensure that clouds do not overflow the section */
+  background: linear-gradient(45deg, #4b0082, #8a2be2); /* Initial gradient colors */
+  animation: gradientAnimation 15s ease infinite; /* Animation for gradient */
 }
 
+/* Cloud Styles */
+#Clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensures clouds don't interfere with interactions */
+}
+
+.Cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent white cloud color */
+  border-radius: 50%;
+  width: 300px; /* Width of the cloud */
+  height: 300px; /* Height of the cloud */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Soft shadow to give some depth */
+}
+
+.Cloud.Foreground {
+  opacity: 0.5;
+  animation: moveCloudsForeground 60s linear infinite;
+  top: 10%;
+  left: -20%;
+}
+
+.Cloud.Background {
+  opacity: 0.3;
+  animation: moveCloudsBackground 120s linear infinite;
+  top: 40%;
+  left: -30%;
+}
+
+/* Cloud Animation for Foreground */
+@keyframes moveCloudsForeground {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Cloud Animation for Background */
+@keyframes moveCloudsBackground {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Gradient Background Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Container for image and content */
 #home12 .container {
   max-width: 800px;
   text-align: right; /* Align text to the right */
   display: flex; /* Display items in a row */
   justify-content: space-between; /* Spacing between items */
   align-items: center; /* Center vertically */
+  position: relative; /* Ensure it is above the clouds */
+  z-index: 1; /* Layer above the clouds */
 }
 
 #home12 .image-container {
@@ -1670,6 +2208,7 @@ html {
     transform: scale(1);
   }
 }
+
 
 
 
@@ -2545,6 +3084,10 @@ button:hover {
   
   
   <section class="home3" id="home3"> <!-- Added section for classes offered -->
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    
     <div class="container">
       <div class="title">Classes Offered</div>
       <div class="content">
@@ -2580,6 +3123,20 @@ button:hover {
   </section>
 
   <section class="home7a" id="home7a">
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
     <div class="container">
         <div class="agenda">
             <h1>1. Today's Agenda</h1>
@@ -2604,7 +3161,18 @@ button:hover {
 
 
 
-  <section class="home8" id="home8">
+
+<section class="home8" id="home8">
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
   <div class="container">
     <h1 class="heading">Our Teaching Techniques</h1>
     <div class="steps-container">
@@ -2629,43 +3197,99 @@ button:hover {
   </div>
 </section>
 
-  
-  
-  
 
-
-    <section class="home10" id="home10">
-    <div class="container">
-      <div class="left-section">
-        <div class="title">4. Classroom Policies</div>
-        <div class="subtitle">Please ensure your child adheres to our classroom rules:</div>
-      </div>
-      <div class="right-section">
-        <div class="buttons">
-          <button class="button class6">Regular Attendance</button>
-          <button class="button class7">Participate Regularly</button>
-          <button class="button class8">Homework Supervision</button>
-          <button class="button class9">Safe Technology Usage</button>
-          <button class="button class10">Feedback Sharing</button>
-        </div>
+<section class="home9" id="home9">
+  <header>
+    <h1>3. Class News</h1>
+  </header>
+  <div class="container">
+    <div class="section">
+      <h2>Upcoming Events</h2>
+      <p>Keep parents informed about any upcoming events, such as parent-teacher meetings, educational seminars, or extracurricular activities. This fosters a sense of involvement and ensures parents can plan accordingly.</p>
+      <div class="box">
+        <img src="upcoming.png" alt="Events Icon">
       </div>
     </div>
-  </section>
 
-
-
-
-  <section class="home12" id="home12">
-    <div class="container">
-      <div class="image-container">
-        <img src="teacher.jpg" alt="Student Photo">
+    <div class="section">
+      <div class="box">
+        <img src="trophy.png" alt="Trophy Icon">
       </div>
-      <div>
-        <h1>6. Student of the Week</h1>
-        <p>In the classroom, acknowledging these high-achievers is an opportunity to highlight the positive aspects of healthy competition. It encourages students to set personal goals, work diligently, and strive for excellence.</p>
+      <h2>Student Achievements</h2>
+      <p>Highlight noteworthy achievements of students, whether it's academic success, participation in competitions, or positive contributions to the classroom community. Celebrating these accomplishments reinforces a positive learning environment.</p>
+    </div>
+
+    <div class="section">
+      <h2>Curriculum Updates</h2>
+      <p>We will share any updates or changes to the curriculum, providing insights into what students will be learning in the coming weeks. This helps parents support their child's education at home and stay engaged in their academic journey.</p>
+      <div class="box">
+        <img src="reload.webp" alt="Curriculum Icon">
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+
+
+  
+  
+  
+
+
+<section class="home10" id="home10">
+  <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+  <div class="container">
+    <div class="left-section">
+      <div class="title">4. Classroom Policies</div>
+      <div class="subtitle">Please ensure your child adheres to our classroom rules:</div>
+    </div>
+    <div class="right-section">
+      <div class="buttons">
+        <button class="button class6">Regular Attendance</button>
+        <button class="button class7">Participate Regularly</button>
+        <button class="button class8">Homework Supervision</button>
+        <button class="button class9">Safe Technology Usage</button>
+        <button class="button class10">Feedback Sharing</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="home12" id="home12">
+  <div class="container">
+    <div class="image-container">
+      <img src="teacher.jpg" alt="Student Photo">
+    </div>
+    <div class="content">
+      <h1>6. Student of the Week</h1>
+      <p>In the classroom, acknowledging these high-achievers is an opportunity to highlight the positive aspects of healthy competition. It encourages students to set personal goals, work diligently, and strive for excellence.</p>
+    </div>
+  </div>
+  <div id="Clouds">
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+  </div>
+</section>
+
+
   
 
 
@@ -3149,6 +3773,20 @@ particlesJS('particles-js', {
   },
   "retina_detect": true
 });
+
+
+const starContainer = document.querySelector('.stars');
+    const starCount = 50;
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.width = `${Math.random() * 3 + 1}px`;
+      star.style.height = star.style.width;
+      starContainer.appendChild(star);
+    }
 
 
 
