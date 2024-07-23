@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Website</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Patrick+Hand:wght@400&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
@@ -258,16 +259,20 @@ html {
 }
 
 #home4 .content h2 {
+  font-family: 'Patrick Hand', cursive;
   font-size: 3.5rem;
   margin-top: 20px;
   margin-left: -5px;
   font-weight: bold;
-} /* Increase text size */
-
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for depth */
+}
 
 #home4 .content p {
-  font-size: 2.1rem; /* Increase text size */
+  font-size: 2.1rem;
+  line-height: 1.6; /* Improve readability */
+  margin-top: 10px;
 }
+
 
 #home4 .image-container {
   flex: 1;
@@ -666,7 +671,8 @@ html {
 #home6 img {
   max-width: 100%;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Transition for smooth changes */
+  animation: rocketMovement 5s ease-in-out infinite; /* Animation for continuous effect */
 }
 
 #home6 img:hover {
@@ -771,13 +777,13 @@ html {
 
 @keyframes swing {
   0% {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
   }
   50% {
-    transform: rotate(5deg);
+    transform: rotate(2deg);
   }
   100% {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
   }
 }
 
@@ -1021,7 +1027,10 @@ html {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
+  transition: transform 0.3s ease; /* Transition for smooth changes */
+  animation: rocketMovement 5s ease-in-out infinite; /* Animation for continuous effect */
 }
+
 
 #home6 .content {
   flex: 1;
@@ -1046,7 +1055,7 @@ html {
 
 #home6 .content p {
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.6;
@@ -2830,7 +2839,7 @@ button:hover {
               <li>SCIENCE</li>
             </ul>
           </div>
-          <button class="book-demo">BOOK FREE DEMO CLASS</button>
+          <button class="book-demo" onclick="openRazorpay()">BOOK FREE DEMO CLASS</button>
         </div>
         <div class="pricing-card">
           <div class="card-header">CBSC 9th & 10th</div>
@@ -2842,7 +2851,7 @@ button:hover {
               <li>SCIENCE</li>
             </ul>
           </div>
-          <button class="book-demo">BOOK FREE DEMO CLASS</button>
+          <button class="book-demo" onclick="openRazorpay()">BOOK FREE DEMO CLASS</button>
         </div>
         <div class="pricing-card">
           <div class="card-header">IIT JEE & NEET FOUNDATION</div>
@@ -2855,11 +2864,18 @@ button:hover {
               <li>EXAM SPECIFIC EXTRA CLASSES</li>
             </ul>
           </div>
-          <button class="book-demo">BOOK FREE DEMO CLASS</button>
+          <button class="book-demo" onclick="openRazorpay()">BOOK FREE DEMO CLASS</button>
         </div>
       </div>
     </div>
   </section>
+  
+  <script>
+    function openRazorpay() {
+      window.open('https://rzp.io/l/xTpueXI', '_blank');
+    }
+  </script>
+  
 
 
   <section class="home19" id="home19">
