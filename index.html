@@ -1764,11 +1764,11 @@ html {
   }
 }
 
-
 #home9 {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   color: #000;
+  padding: 20px;
 }
 
 #home9 header h1 {
@@ -1858,6 +1858,42 @@ html {
 #home9 .section:nth-child(3) p {
   color: #ADD8E6;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #home9 .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home9 .section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #home9 .section h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  #home9 header h1 {
+    font-size: 1.5em;
+  }
+
+  #home9 .section {
+    padding: 15px;
+  }
+
+  #home9 .section h2 {
+    font-size: 1.2em;
+  }
+
+  #home9 .box {
+    padding: 5px;
+  }
+}
+
 
 
 
